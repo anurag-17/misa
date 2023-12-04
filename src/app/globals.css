@@ -2,26 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+    font-family: 'Lora';
+    src: url('../../public/Lora/Lora-VariableFont_wght.ttf');
+    font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.fontf{
+    font-family: 'Lora';
+}
+
+  #main-img {
+    background-image: url("../../public/girl.png");
+    background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 100%;
+      background-position: top center;
+      /* padding-bottom: 30px; */
+  }  
+
+  #purple{
+    background-image: url(../../public/perl.png);
   }
+  #voilets{
+    background-image: url(../../public/voilets.png);
+  }
+  @media (min-width:1536px) and (max-width:1800px){
+  
+    #main-img{
+        padding-top: 250px;
+    }
+    .bright{
+        font-size: 37px;
+    }
+    .lips{
+        padding-bottom: 30px;
+    }
+    .shop{
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 100px;
+
+    }
+  }
+
+  #image2{
+    position: relative;
+   
+}
+#img1{
+    opacity: 1;
+    display: block;
+  
+    transition: .5s ease;
+    backface-visibility: hidden;
+  
+}
+#img4{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  
+}
+#image2:hover #img1{
+    opacity: 0.3;
+}
+#image2:hover #img4{
+    opacity: 1;
+
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+#image2:hover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1); 
+    z-index: -1;
 }
+#view1{
+    animation: views 1s infinite alternate-reverse;
+}
+@keyframes views {
+    from{
+        width: 0%;
+    }
+    to{
+        width:1%
+    }
+    
+}
+  
