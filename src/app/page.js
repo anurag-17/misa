@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 import misa from "../../public/misa.svg";
 import srch from "../../public/search.svg";
@@ -22,6 +23,13 @@ import r4 from "../../public/Rectangle 21.png";
 import r5 from "../../public/Rectangle 22.png";
 import instagram from "../../public/instagram.png";
 import arrow from "../../public/arrow.png";
+import rating1 from "../../public/rating1.png";
+import rating2 from "../../public/rating2.png";
+import twitter from "../../public/twitter.png";
+import facebook from "../../public/facebook.png";
+import instag from "../../public/instagrams.png";
+import tiktok from "../../public/tiktok.png";
+import youtube from "../../public/youtube.png";
 
 const Page = () => {
   return (
@@ -54,191 +62,312 @@ const Page = () => {
             </ul>
           </div>
           <div id="main-img" className="flex 2xl:pt-72 xl:pt-52 lg:pt-40">
-            <div className="lg:px-16 xl:px-20 2xl:px-28  middle-text">
+            <div className="lg:px-16 xl:px-24 2xl:px-28  middle-text">
               <div className="lg:text-3xl xl:text-4xl 2xl:text-6xl lg:pb-1 xl:pb-2 2xl:pb-4 bright fontf">
                 BRIGHT
               </div>
               <div className="lg:text-3xl xl:text-4xl 2xl:text-6xl lg:pb-5 xl:pb-10 2xl:pb-16 bright lips fontf">
                 MOVING LIPS
               </div>
-              <button className="xl:mb-56 2xl:mb-52 border border-black rounded-full lg:py-2 xl:py-2 2xl:py-4 lg:px-5 xl:px-5 2xl:px-10 lg:text-[12px] xl:text-[16px] font-medium shop">
+              <button className="lg:mb-52 xl:mb-56 2xl:mb-52 border border-black rounded-full lg:py-2 xl:py-2 2xl:py-4 lg:px-5 xl:px-5 2xl:px-10 lg:text-[12px] xl:text-[16px] font-medium shop">
                 SHOP NOW
               </button>
             </div>
           </div>
-          <div className="xl:text-4xl 2xl:text-5xl 2xl:mt-28 flex justify-center fontf">
+          <div className="lg:text-4xl xl:text-4xl 2xl:text-5xl 2xl:mt-28 flex justify-center fontf">
             OUR COLLECTIONS
           </div>
           {/* ----------section 2---------- */}
-          <div className="flex justify-around px-28 gap-1 mt-16">
+          <div className="flex justify-around lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-16">
             <div className="w-1/3">
               <div id="purple">
-                <Image className="mx-auto py-9" src={p1} alt="image" />
+                <Image className="mx-auto lg:h-80 xl:h-full lg:py-7 xl:py-9" src={p1} alt="image" />
               </div>
-              <h1 className="flex justify-center text-xl my-5">CORRECTORS</h1>
+              <h1 className="flex justify-center xl:text-lg 2xl:text-xl my-5">CORRECTORS</h1>
             </div>
             <div className="w-1/3">
               <div id="purple">
-                <Image className="mx-auto py-12" src={p2} alt="image" />
+                <Image className="mx-auto lg:h-80 xl:h-full lg:py-7 xl:py-12" src={p2} alt="image" />
               </div>
-              <h1 className="flex justify-center text-xl my-5">
+              <h1 className="flex justify-center xl:text-lg 2xl:text-xl my-5">
                 PERLY EYES COLLECTION
               </h1>
             </div>
             <div className="w-1/3">
               <div id="purple">
-                <Image className="mx-auto py-9" src={p3} alt="image" />
+                <Image className="mx-auto lg:h-80 xl:h-full lg:py-7 xl:py-9" src={p3} alt="image" />
               </div>
-              <h1 className="flex justify-center text-xl my-5">BLUSH BLUSH</h1>
+              <h1 className="flex justify-center xl:text-lg 2xl:text-xl my-5">BLUSH BLUSH</h1>
             </div>
           </div>
 
-          <div className="flex justify-around px-28 gap-1 mt-16">
+          <div className="flex justify-around lg:px-16 xl:px-24 2xl:px-28 gap-1 lg:mt-7 xl:mt-10 2xl:mt-16">
             <div className="w-1/3">
               <div id="purple">
-                <Image className="mx-auto py-9" src={p4} alt="image" />
+                <Image className="mx-auto lg:h-80 xl:h-full lg:py-7 xl:py-9" src={p4} alt="image" />
               </div>
-              <h1 className="flex justify-center text-xl my-5">
+              <h1 className="flex justify-center xl:text-lg 2xl:text-xl my-5">
                 SATIN LIPSTICKS
               </h1>
             </div>
             <div className="w-1/3">
               <div id="purple">
-                <Image className="mx-auto py-9" src={p5} alt="image" />
+                <Image className="mx-auto  lg:h-80 xl:h-full lg:py-7 xl:py-9" src={p5} alt="image" />
               </div>
-              <h1 className="flex justify-center text-xl my-5">FOUNDATIONS</h1>
+              <h1 className="flex justify-center xl:text-lg 2xl:text-xl my-5">FOUNDATIONS</h1>
             </div>
             <div className="w-1/3">
               <div id="purple">
-                <Image className="mx-auto py-9" src={p6} alt="image" />
+                <Image className="mx-auto lg:h-80 xl:h-full lg:py-7 xl:py-9" src={p6} alt="image" />
               </div>
-              <h1 className="flex justify-center text-xl my-5">EYES</h1>
+              <h1 className="flex justify-center xl:text-lg 2xl:text-xl my-5">EYES</h1>
             </div>
           </div>
+          {/* --------section 3------ */}
+       <div className="px-28 mt-16" id="box1">
+        <div className="flex flex-col items-center lg:py-32 xl:py-36 2xl:py-72 text-white">
+          <div className="fontf  lg:text-[35px] xl:text-[40px] 2xl:text-[54px]">PERLAY EYES</div>
+          <div className="fontf lg:text-[35px] xl:text-[40px] 2xl:text-[54px]">COLLECTION</div>
+          <div>
+         <button className="lg:mr-[80px] xl:mr-[120px] 2xl:mr-52 lg:text-[14px] xl:text-[16px] lg:px-4 xl:px-6 lg:py-2 xl:py-3 lg:mt-5 xl:mt-8 border border-white rounded-full">SHOP NOW</button>
+        </div></div>
+       </div>
+
 
           {/* ---------SECTION 5---------- */}
-          <div className="xl:text-4xl 2xl:text-5xl 2xl:mt-28 flex justify-center fontf">
+          <div className="lg:text-3xl  xl:text-4xl 2xl:text-5xl lg:mt-16 xl:mt-20 2xl:mt-28 flex justify-center fontf">
             NEW ARRIVAL
           </div>
 
-          <div className="flex justify-around px-28 gap-1 mt-16">
+          <div className="flex justify-around lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-16">
             <div className="w-1/3">
               <div id="voilets">
-                <Image className="mx-auto py-12" src={p7} alt="image" />
+                <Image className="mx-auto py-12 lg:h-96 2xl:h-full" src={p7} alt="image" />
               </div>
-              <h1 className="flex justify-center text-xl my-5">
+              <h1 className="flex justify-center xl:text-lg 2xl:text-xl my-5">
                 SMOOTHING SMOOTHING BASE
               </h1>
             </div>
             <div className="w-1/3">
               <div id="voilets">
-                <Image className="mx-auto py-10" src={p8} alt="image" />
+                <Image className="mx-auto py-10 lg:h-96 2xl:h-full" src={p8} alt="image" />
               </div>
-              <h1 className="flex justify-center text-xl my-5">
+              <h1 className="flex justify-center xl:text-lg 2xl:text-xl my-5">
                 EYE LINER LIKER BLACK
               </h1>
             </div>
             <div className="w-1/3">
               <div id="voilets">
-                <Image className="mx-auto py-9" src={p9} alt="image" />
+                <Image className="mx-auto py-9 lg:h-96 2xl:h-full" src={p9} alt="image" />
               </div>
-              <h1 className="flex justify-center text-xl my-5">
+              <h1 className="flex justify-center xl:text-lg 2xl:text-xl my-5">
                 LIPLIKER LIPSTICK MISAPARIS
               </h1>
             </div>
           </div>
 
           {/* ----------SECTION 6---------- */}
-          <div className="px-28 mt-14">
-            <div className="flex justify-between py-10 px-20  bg-black">
-              <Image src={g1} alt="image" />
-              <Image src={g2} alt="image" />
-              <Image src={g3} alt="image" />
-              <Image src={g4} alt="image" />
+          <div className="lg:px-16 xl:px-24 2xl:px-28 mt-20">
+            <div className="flex justify-between lg:py-12 xl:py-16 lg:px-16 xl:px-20  bg-black">
+              <Image className="lg:w-40 xl:w-56  2xl:w-full" src={g1} alt="image" />
+              <Image className="lg:w-40 xl:w-56  2xl:w-full" src={g2} alt="image" />
+              <Image className="lg:w-40 xl:w-56  2xl:w-full" src={g3} alt="image" />
+              <Image className="lg:w-40 xl:w-56  2xl:w-full" src={g4} alt="image" />
             </div>
+          </div>
+          {/* ----------section 7---------- */}
+          <div className="w-full  mt-24 lg:px-40 xl:px-44 2xl:px-48">
+            <Image className="w-full" src={rating1} alt="image" />
+            <Image className="w-full" src={rating2} alt="image" />
           </div>
 
           {/* -----------section 8--------- */}
-          <div className="fontf text-5xl mt-20 flex justify-center">
+          <div className="fontf lg:text-3xl xl:text-4xl 2xl:text-5xl mt-20 flex justify-center">
             FOLLOW US ON INSTAGRAM
           </div>
           <div className=" flex gap-6 mt-9">
             <div id="image2">
-              <Image
-                id="img1"
-                className=" w-96 "
-                src={r1}
-                alt="image"
-              />
+              <Image id="img1" className=" w-96 " src={r1} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
               </div>
             </div>
             <div id="image2">
-              <Image
-                id="img1"
-                className=" w-96 "
-                src={r2}
-                alt="image"
-              />
+              <Image id="img1" className=" w-96 " src={r2} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
               </div>
             </div>
             <div id="image2">
-              <Image
-                id="img1"
-                className=" w-96 "
-                src={r3}
-                alt="image"
-              />
+              <Image id="img1" className=" w-96 " src={r3} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
               </div>
             </div>
             <div id="image2">
-              <Image
-                id="img1"
-                className=" w-96 "
-                src={r4}
-                alt="image"
-              />
+              <Image id="img1" className=" w-96 " src={r4} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
               </div>
             </div>
             <div id="image2">
-              <Image
-                id="img1"
-                className=" w-96 "
-                src={r5}
-                alt="image"
-              />
+              <Image id="img1" className=" w-96 " src={r5} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
               </div>
             </div>
           </div>
           {/* ----------section 9---------- */}
-          <div className="flex justify items-center px-28 mt-16">
+          <div className="flex items-center justify-between lg:px-16 xl:px-24 2xl:px-28 mt-16">
             <div>
-              <div className="fontf text-5xl pb-10 ">SUBSCRIBE TO OUR NEWS LETTER</div>
-              <div className="">Join us today at no cost and be the first to know about our latest updates, discounts and special offers.</div>
+              <div className="fontf lg:text-[30px] xl:text-[36px] 2xl:text-[46px] lg:pb-4 2xl:pb-7 ">
+                SUBSCRIBE TO OUR NEWS LETTER
+              </div>
+              <div className="lg:text-[14px]  xl:text-sm 2xl:text-base">
+                Join us today at no cost and be the first to know about our
+                latest updates, discounts and special offers.
+              </div>
             </div>
-            <div className="relative w-full" >
-                    <input
-                    
-                      className=" border w-[40%]  border-[#BABABA] bg-[#F5F5F5]  2xl:px-6   2xl:py-2 py-1  text-black"
-                      type="email"
-                      placeholder="Email"
-                    />
-                    <Image
-                     id="view1"
-                      src={arrow} 
-                      alt="Right Arrow"
-                      className="absolute top-1/2 right-2 transform -translate-y-1/2 w-5"
-                    />
+            <div className="relative w-[30%]">
+              <input
+                className="border w-full border-[#BABABA] bg-[#F5F5F5]  xl:px-2 2xl:px-2 lg:py-2 xl:py-3 2xl:py-4 text-black"
+                type="email"
+                placeholder="Email"
+              />
+              <Image
+                id="view1"
+                src={arrow}
+                alt="Right Arrow"
+                className="absolute top-1/2 right-2 transform -translate-y-1/2 w-5"
+              />
+            </div>
+          </div>
+
+          <hr className="lg:mx-16 xl:mx-24 2xl:mx-28 lg:mt-14 xl:mt-20 border-t-2 border-[#315031] opacity-25" />
+          {/* ----------section 10------------------------- */}
+          <div className="lg:px-16 xl:px-24 2xl:px-28 mt-20">
+            <footer className="">
+              <div className="flex flex-wrap justify-between">
+                <div className="space-y-3 w-[25%]">
+                  <Image className="mb-5" src={misa} alt="image" />
+
+                  <p>
+                    Our products are certified “guaranteed French origin”
+                    <br /> and environmentally friendly.
+                  </p>
+                  <p className="">
+                    All of our makeup products are formulated and manufactured
+                    in France with natural ingredients and using sustainable
+                    processes. Very high quality pigments.
+                  </p>
+
+                  <div className="flex gap-4 pt-6">
+                    <Link id="roundd" href="https://www.facebook.com">
+                      <Image src={twitter} />
+                    </Link>
+                    <Link id="roundd" href="https://www.instagram.com">
+                      <Image src={facebook} />
+                    </Link>
+                    <Link id="roundd" href="https://twitter.com">
+                      <Image src={instag} />
+                    </Link>
+                    <Link id="roundd" href="https://tiktok.com">
+                      <Image src={tiktok} />
+                    </Link>
+                    <Link id="roundd" href="https://youtube.com">
+                      <Image src={youtube} />
+                    </Link>
                   </div>
+                </div>
+
+                <div className="  ">
+                  <h2 className="mb-6   uppercase fontf text-xl">
+                    QUICK LINKS
+                  </h2>
+                  <ul className=" dark:text-gray-400 lg:space-y-2 xl:space-y-2 2xl:space-y-4 ">
+                    <li className="">
+                      <Link href="#" className="hover:underline">
+                        Home And News
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="#" className="hover:underline">
+                        Bestsellers
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="#" className="hover:underline">
+                        Complexion
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="#" className="hover:underline">
+                        Eyes
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="#" className="hover:underline">
+                        Lips
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="#" className="hover:underline">
+                        Care
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="#" className="hover:underline">
+                        Makeup Sessions
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="#" className="hover:underline">
+                        Services
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className=" ">
+                  <h2 className="mb-6   uppercase fontf text-xl">
+                    CUSTOMER SERVICES
+                  </h2>
+                  <ul className=" dark:text-gray-400 lg:space-y-2 xl:space-y-2 2xl:space-y-4 ">
+                    <li className="">
+                      <Link href="#" className="hover:underline">
+                        Delivery & Return
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="#" className="hover:underline">
+                        Terms & Conditions
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="#" className="hover:underline">
+                        Privacy Policy
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="space-y-7 lg:mt-0 md:mt-7  text-xl lg:w-[19%] xl:w-[17%] 2xl:w-[12%] ">
+                  <p className="fontf">COUNTRY REGION</p>
+                  <input
+                    className="border py-2 w-full"
+                    type="email"
+                    placeholder="Email"
+                  />
+                </div>
+              </div>
+              <hr className="mt-14 xl:mx- 2xl:mx- lg:mx- md:mx- sm:mx- mx- border-t-2 border-[#315031] opacity-25" />
+
+              <div className="xl:py-3 2xl:py-6 ">
+                <div className="xl:text-sm 2xl:text-base font-light  text-[#AAA] flex justify-center text-center ">
+                  © 2023 TALH All Rights Reserved.
+                </div>
+              </div>
+            </footer>
           </div>
         </div>
       </section>

@@ -20,6 +20,13 @@
       background-position: top center;
       /* padding-bottom: 30px; */
   }  
+  #box1{
+    background-image: url("../../public/boxset.png");
+    background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 100%;
+      background-position: top center;
+  }
 
   #purple{
     background-image: url(../../public/perl.png);
@@ -95,7 +102,7 @@
         width: 0%;
     }
     to{
-        width:1%
+        width:3%
     }
     
 }
