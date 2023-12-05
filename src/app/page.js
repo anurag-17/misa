@@ -16,11 +16,11 @@ import g1 from "../../public/Group 31.png";
 import g2 from "../../public/Group 29.png";
 import g3 from "../../public/Group 28.png";
 import g4 from "../../public/Group 30.png";
-import r1 from "../../public/Rectangle 18.png";
-import r2 from "../../public/Rectangle 19.png";
-import r3 from "../../public/Rectangle 20.png";
-import r4 from "../../public/Rectangle 21.png";
-import r5 from "../../public/Rectangle 22.png";
+import r1 from "../../public/Rectangle 18.svg";
+import r2 from "../../public/Rectangle 19.svg";
+import r3 from "../../public/Rectangle 20.svg";
+import r4 from "../../public/Rectangle 21.svg";
+import r5 from "../../public/Rectangle 22.svg";
 import instagram from "../../public/instagram.png";
 import arrow from "../../public/arrow.png";
 import rating1 from "../../public/rating1.png";
@@ -42,14 +42,15 @@ const Page = () => {
               alt="image"
               className="ml-auto 2xl:w-52 xl:w-36 lg:w-32"
             />
-            <Image
+            
+            {/* <Image
               src={srch}
               alt="image"
               className="ml-auto 2xl:w-44 xl:w-24 lg:w-20"
-            />
+            /> */}
           </div>
           <hr className="border-t-2 border-[#315031] opacity-25" />
-          <div className="meanu">
+          <div className="meanu lg:block hidden ">
             <ul className="flex justify-center lg:text-[15px] xl:text-xs 2xl:text-base lg:space-x-4 xl:space-x-7 2xl:space-x-16   py-3 ">
               <li>HOME AND NEWS</li>
               <li>BESTSELLERS</li>
@@ -251,11 +252,11 @@ const Page = () => {
                 <div className="space-y-3 w-[25%]">
                   <Image className="mb-5" src={misa} alt="image" />
 
-                  <p>
+                  <p className="lg:text-xs xl:text-sm 2xl:text-sm">
                     Our products are certified “guaranteed French origin”
                     <br /> and environmentally friendly.
                   </p>
-                  <p className="">
+                  <p className="lg:text-xs xl:text-sm 2xl:text-sm">
                     All of our makeup products are formulated and manufactured
                     in France with natural ingredients and using sustainable
                     processes. Very high quality pigments.
@@ -281,10 +282,10 @@ const Page = () => {
                 </div>
 
                 <div className="  ">
-                  <h2 className="mb-6   uppercase fontf text-xl">
+                  <h2 className="lg:text-lg xl:text-xl mb-6 uppercase fontf ">
                     QUICK LINKS
                   </h2>
-                  <ul className=" dark:text-gray-400 lg:space-y-2 xl:space-y-2 2xl:space-y-4 ">
+                  <ul className="xl:text-sm 2xl:text-sm dark:text-gray-400 lg:space-y-2 xl:space-y-2 2xl:space-y-4 ">
                     <li className="">
                       <Link href="#" className="hover:underline">
                         Home And News
@@ -332,7 +333,7 @@ const Page = () => {
                   <h2 className="mb-6   uppercase fontf text-xl">
                     CUSTOMER SERVICES
                   </h2>
-                  <ul className=" dark:text-gray-400 lg:space-y-2 xl:space-y-2 2xl:space-y-4 ">
+                  <ul className="xl:text-sm 2xl:text-sm dark:text-gray-400 lg:space-y-2 xl:space-y-2 2xl:space-y-4 ">
                     <li className="">
                       <Link href="#" className="hover:underline">
                         Delivery & Return
