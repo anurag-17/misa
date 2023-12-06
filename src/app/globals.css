@@ -8,51 +8,20 @@
     font-style: normal;
 }
 
-/* ----search css--------- */
-/* .search-container {
-    position: relative;
+@font-face {
+    font-family: 'Poppins';
+    src: url('../../public/Poppins/Poppins-Regular.ttf');
+    font-style: normal;
 }
 
-.search-icon {
-    cursor: pointer;
-}
-
-.search-popup {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-}
-
-.close-icon {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-}
-
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-} */
-
-/* button {
-    padding: 10px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-} */
 
 .fontf{
     font-family: 'Lora';
 }
+#family{
+    font-family: 'Poppins';
+}
+
 
   #main-img {
     background-image: url("../../public/girl.png");
@@ -68,6 +37,12 @@ input[type="text"] {
       background-size: cover;
       background-size: 100%;
       background-position: top center;
+  }
+  .gradient-text {
+    background: linear-gradient(to right, #ff69b4, #3498db); /* Pink to Blue gradient colors */
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block; /* Ensures the gradient applies only to the text, not the entire container */
   }
 
   #purple{

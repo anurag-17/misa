@@ -36,10 +36,20 @@ import instag from "../../public/instag.svg";
 import tiktok from "../../public/tiktok.svg";
 import youtube from "../../public/youtube.svg";
 import xcross from "../../public/xcross.svg";
+import google from "../../public/google.svg";
+import starr from "../../public/starrate.svg";
+import blutik from "../../public/tickcircle.svg";
+import righttik from "../../public/righttik.svg";
+import aaa from "../../public/aalpha.svg";
+import uuu from "../../public/usersvg.svg";
+import rrr from "../../public/salpha.svg";
+import kkk from "../../public/kalpha.svg";
+import iii from "../../public/ialpha.svg";
+import sss from "../../public/salpha.svg";
 
 const Page = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   const openSearch = () => {
     setIsSearchOpen(true);
@@ -52,86 +62,113 @@ const Page = () => {
   const performSearch = () => {
     // Add your search functionality here
     // For example, you can use the 'searchTerm' state to perform a search
-    console.log('Performing search for:', searchTerm);
+    console.log("Performing search for:", searchTerm);
 
     // Close the search popup after performing the search
     closeSearch();
   };
 
-
   return (
     <>
       <section>
         <div className="container-fluid" id="family">
-        <div className="fixed  
-                w-full top-0 left-0 bg-white">
-          <div className="py-4 flex items-center justify-center mx-24 2xl:my-5 xl:my-2 lg:my-1 relative">
-            <Image
-              src={misa}
-              alt="image"
-              className="absolute 2xl:w-52 xl:w-36 lg:w-32 "
-            />
-            <div className="flex 2xl:gap-9 ml-auto ">
+          <div
+            className="fixed  
+                w-full top-0 left-0 bg-white"
+          >
+            <div className="py-4 flex items-center justify-center mx-24 2xl:my-5 xl:my-2 lg:my-1 relative">
+              <Image
+                src={misa}
+                alt="image"
+                className="absolute 2xl:w-52 xl:w-36 lg:w-32 "
+              />
+              <div className="flex 2xl:gap-9 ml-auto ">
+                <div className="search-container">
+                  {!isSearchOpen && (
+                    <div className="search-icon" onClick={openSearch}>
+                      <Image
+                        className="w-7 cursor-pointer"
+                        src={search}
+                        alt="image"
+                      />
+                    </div>
+                  )}
+                  {isSearchOpen && (
+                    <div className="search-popup flex items-center">
+                      <span className="close-icon" onClick={closeSearch}>
+                        <Image className="w-6 h-6" src={xcross} alt="cross" />
+                      </span>
+                      <input
+                        className="border p-2 flex-grow" // Use flex-grow to allow the input to grow and take remaining space
+                        type="text"
+                        placeholder="Search..."
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                      />
+                    </div>
+                  )}
+                </div>
 
-            <div className="search-container">
-      {!isSearchOpen && (
-        <div className="search-icon" onClick={openSearch}>
-          <Image className="w-7 cursor-pointer" src={search} alt="image" />
-        </div>
-      )}
-      {isSearchOpen && (
-        <div className="search-popup flex items-center">
-          <span className="close-icon" onClick={closeSearch}>
-            <Image className="w-6 h-6" src={xcross} alt="cross" />
-          </span>
-          <input
-            className="border p-2 flex-grow" // Use flex-grow to allow the input to grow and take remaining space
-            type="text"
-            placeholder="Search..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          
-        </div>
-      )}
-    </div>
-              
-              <Image className="cursor-pointer w-6" src={user} alt="image" />
-              <Image className="cursor-pointer w-6" src={basket} alt="image" />
+                <Image className="cursor-pointer w-6" src={user} alt="image" />
+                <Image
+                  className="cursor-pointer w-6"
+                  src={basket}
+                  alt="image"
+                />
+              </div>
+            </div>
+
+            <hr className="border-t-2 border-[#315031] opacity-25" />
+            <div className="meanu lg:block hidden ">
+              <ul className=" flex justify-center lg:text-[15px] xl:text-xs 2xl:text-base lg:space-x-4 xl:space-x-7 2xl:space-x-16   py-3 ">
+                <li>
+                
+                  <Link href="#" className="hover:underline">
+                    HOME AND NEWS
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:underline">
+                    BESTSELLERS
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:underline">
+                    COMPLEXION
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:underline">
+                    EYES
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:underline">
+                    LIPS
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:underline">
+                    CARE
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:underline">
+                    MAKEUP SESSION
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#" className="hover:underline">
+                    SERVICES
+                  </Link>
+                </li>
+              </ul>
             </div>
           </div>
-
-          <hr className="border-t-2 border-[#315031] opacity-25" />
-          <div className="meanu lg:block hidden ">
-            <ul className="flex justify-center lg:text-[15px] xl:text-xs 2xl:text-base lg:space-x-4 xl:space-x-7 2xl:space-x-16   py-3 ">
-              <li> <Link href="#" className="hover:underline">
-              HOME AND NEWS
-                    </Link></li>
-              <li><Link href="#" className="hover:underline">
-              BESTSELLERS
-                    </Link></li>
-              <li><Link href="#" className="hover:underline">
-              COMPLEXION
-                    </Link></li>
-              <li><Link href="#" className="hover:underline">
-              EYES
-                    </Link></li>
-              <li><Link href="#" className="hover:underline">
-              LIPS
-                    </Link></li>
-              <li><Link href="#" className="hover:underline">
-              CARE
-                    </Link></li>
-              <li><Link href="#" className="hover:underline">
-              MAKEUP SESSION
-                    </Link></li>
-              <li><Link href="#" className="hover:underline">
-              SERVICES
-                    </Link></li>
-            </ul>
-          </div>
-          </div>
-          <div id="main-img" className="z-50 mt-32 flex 2xl:pt-72 xl:pt-52 lg:pt-40">
+          <div
+            id="main-img"
+            className="z-50 mt-32 flex 2xl:pt-72 xl:pt-52 lg:pt-40"
+          >
             <div className="lg:px-16 xl:px-24 2xl:px-28  middle-text">
               <div className="lg:text-3xl xl:text-4xl 2xl:text-6xl lg:pb-1 xl:pb-2 2xl:pb-4 bright fontf">
                 BRIGHT
@@ -139,57 +176,59 @@ const Page = () => {
               <div className="lg:text-3xl xl:text-4xl 2xl:text-6xl lg:pb-5 xl:pb-10 2xl:pb-16 bright lips fontf">
                 MOVING LIPS
               </div>
-              <button className="lg:mb-52 xl:mb-56 2xl:mb-52 border border-black rounded-full lg:py-2 xl:py-2 2xl:py-4 lg:px-5 xl:px-5 2xl:px-10 lg:text-[12px] xl:text-[16px] font-medium shop">
+              <button className="lg:mb-52 xl:mb-56  2xl:mb-60 border border-black rounded-full lg:py-2 xl:py-2 2xl:py-4 lg:px-5 xl:px-5 2xl:px-10 lg:text-[12px] xl:text-[16px] font-medium shop">
                 SHOP NOW
               </button>
             </div>
           </div>
-          <div className="lg:text-4xl xl:text-4xl 2xl:text-5xl 2xl:mt-28 flex justify-center fontf">
+          {/* ----------section 2---------- */}
+
+          <div className="lg:text-4xl xl:text-4xl 2xl:text-5xl 2xl:mt-32 flex justify-center fontf">
             OUR COLLECTIONS
           </div>
-          {/* ----------section 2---------- */}
-          <div className="flex justify-around lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-16">
+
+          <div className="flex justify-around lg:px-16 xl:px-24 2xl:px-28 gap-1 2xl:mt-16">
             <div className="w-1/3">
-              <div id="purple">
+              <div className="w-full h-full" id="purple">
                 <Image
-                  className="mx-auto lg:h-80 xl:h-full lg:py-7 xl:py-9"
+                  className="mx-auto lg:h-80 xl:h-full lg:py-7 xl:py-"
                   src={p1}
                   alt="image"
                 />
               </div>
-              <h1 className="flex justify-center xl:text-lg 2xl:text-xl my-5">
+              <h1 className="flex justify-center xl:text-lg 2xl:text-xl mt-7">
                 CORRECTORS
               </h1>
             </div>
             <div className="w-1/3">
-              <div id="purple">
+              <div className="w-full h-full" id="purple">
                 <Image
                   className="mx-auto lg:h-80 xl:h-full lg:py-7 xl:py-12"
                   src={p2}
                   alt="image"
                 />
               </div>
-              <h1 className="flex justify-center xl:text-lg 2xl:text-xl my-5">
+              <h1 className="flex justify-center xl:text-lg 2xl:text-xl mt-7">
                 PERLY EYES COLLECTION
               </h1>
             </div>
             <div className="w-1/3">
-              <div id="purple">
+              <div className="w-full h-full" id="purple">
                 <Image
                   className="mx-auto lg:h-80 xl:h-full lg:py-7 xl:py-9"
                   src={p3}
                   alt="image"
                 />
               </div>
-              <h1 className="flex justify-center xl:text-lg 2xl:text-xl my-5">
+              <h1 className="flex justify-center xl:text-lg 2xl:text-xl mt-7">
                 BLUSH BLUSH
               </h1>
             </div>
           </div>
 
-          <div className="flex justify-around lg:px-16 xl:px-24 2xl:px-28 gap-1 lg:mt-7 xl:mt-10 2xl:mt-16">
+          <div className="flex justify-around lg:px-16 xl:px-24 2xl:px-28 gap-1 lg:mt-7 xl:mt-10 2xl:mt-36">
             <div className="w-1/3">
-              <div id="purple">
+              <div className="w-full h-full" id="purple">
                 <Image
                   className="mx-auto lg:h-80 xl:h-full lg:py-7 xl:py-9"
                   src={p4}
@@ -201,7 +240,7 @@ const Page = () => {
               </h1>
             </div>
             <div className="w-1/3">
-              <div id="purple">
+              <div className="w-full h-full" id="purple">
                 <Image
                   className="mx-auto  lg:h-80 xl:h-full lg:py-7 xl:py-9"
                   src={p5}
@@ -213,7 +252,7 @@ const Page = () => {
               </h1>
             </div>
             <div className="w-1/3">
-              <div id="purple">
+              <div className="w-full h-full" id="purple">
                 <Image
                   className="mx-auto lg:h-80 xl:h-full lg:py-7 xl:py-9"
                   src={p6}
@@ -226,7 +265,7 @@ const Page = () => {
             </div>
           </div>
           {/* --------section 3------ */}
-          <div className="px-28 mt-16" id="box1">
+          <div className="px-28 2xl:mt-44" id="box1">
             <div className="flex flex-col items-center lg:py-32 xl:py-36 2xl:py-72 text-white">
               <div className="fontf  lg:text-[35px] xl:text-[40px] 2xl:text-[54px]">
                 PERLAY EYES
@@ -243,13 +282,13 @@ const Page = () => {
           </div>
 
           {/* ---------SECTION 5---------- */}
-          <div className="lg:text-3xl  xl:text-4xl 2xl:text-5xl lg:mt-16 xl:mt-20 2xl:mt-10 flex justify-center fontf">
+          <div className="lg:text-3xl  xl:text-4xl 2xl:text-5xl lg:mt-16 xl:mt-20 2xl:mt-16 flex justify-center fontf">
             NEW ARRIVAL
           </div>
 
-          <div className="flex justify-around lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-16">
+          <div className="flex justify-around lg:px-16 xl:px-24 2xl:px-28 gap-1 2xl:mt-20">
             <div className="w-1/3">
-              <div id="voilets">
+              <div className="w-full h-full" id="voilets">
                 <Image
                   className="mx-auto py-12 lg:h-96 2xl:h-full"
                   src={p7}
@@ -261,7 +300,7 @@ const Page = () => {
               </h1>
             </div>
             <div className="w-1/3">
-              <div id="voilets">
+              <div className="w-full h-full" id="voilets">
                 <Image
                   className="mx-auto py-10 lg:h-96 2xl:h-full"
                   src={p8}
@@ -273,7 +312,7 @@ const Page = () => {
               </h1>
             </div>
             <div className="w-1/3">
-              <div id="voilets">
+              <div className="w-full h-full" id="voilets">
                 <Image
                   className="mx-auto py-9 lg:h-96 2xl:h-full"
                   src={p9}
@@ -287,13 +326,11 @@ const Page = () => {
           </div>
 
           {/* ----------SECTION 6---------- */}
-         <div className="lg:px-16 xl:px-24 2xl:px-28 mt-20">
-         <div>
-          
-         </div>
-         </div>
-
           <div className="lg:px-16 xl:px-24 2xl:px-28 mt-20">
+            <div></div>
+          </div>
+
+          <div className="lg:px-16 xl:px-24 2xl:px-28 mt-44">
             <div className="flex justify-between lg:py-12 xl:py-16 lg:px-16 xl:px-20  bg-black">
               <Image
                 className="lg:w-40 xl:w-56  2xl:w-64"
@@ -318,16 +355,254 @@ const Page = () => {
             </div>
           </div>
           {/* ----------section 7---------- */}
-          <div className="w-full  mt-24 lg:px-40 xl:px-44 2xl:px-48">
-            <Image className="w-full" src={rating1} alt="image" />
-            <Image className="w-full" src={rating2} alt="image" />
+          <div className="mx-64 bg-gray-50 py-7 rounded-lg mt-36">
+            <div className="flex justify-between px-4">
+              <div className="flex">
+                <div>
+                  <Image src={google} alt="google" />
+                </div>
+                <div className="ml-2 space-y-1">
+                  <p className="text-[#8B7F84] text-xl">MisaParis</p>
+                  <div className="flex gap-1">
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                  </div>
+                  <p className="text-[#8B7F84]">19 notice</p>
+                </div>
+              </div>
+              <button className="bg-[#F2F2F3] 2xl:px-8 2xl:py-3 text-lg rounded-lg ">
+                Leave a comment
+              </button>
+            </div>
           </div>
 
+          <div className="mx-64  2xl:mt-4 grid grid-cols-3 gap-5">
+            <div className="">
+              <div className="bg-gray-50 py-5 px-3 space-y-2 rounded-lg">
+                <div className="flex gap-1">
+                  <Image className="w-5" src={starr} alt="rating" />
+                  <Image className="w-5" src={starr} alt="rating" />
+                  <Image className="w-5" src={starr} alt="rating" />
+                  <Image className="w-5" src={starr} alt="rating" />
+                  <Image className="w-5" src={starr} alt="rating" />
+                  <Image className="w-6" src={blutik} alt="rating" />
+                </div>
+
+                <div className="flex">
+                  <Image className="w-8" src={righttik} alt="righttik" />
+                  <p className="text-[#8B7F84] text-lg">
+                    Warm welcome from Mireille
+                  </p>
+                </div>
+                <div className="flex">
+                  <Image className="w-8" src={righttik} alt="righttik" />
+                  <p className="text-[#8B7F84] text-lg">Unbeatable price</p>
+                </div>
+                <div className="flex">
+                  <Image className="w-8" src={righttik} alt="righttik" />
+                  <p className="text-[#8B7F84] text-lg">Quality products</p>
+                </div>
+              </div>
+
+              <div className="flex 2xl:mt-6">
+                <div>
+                  <Image src={aaa} alt="google" />
+                </div>
+                <div className="ml-2">
+                  <p className="gradient-text text-xl font-bold ">
+                    AI-generated summary
+                  </p>
+                  <p className="text-[#8B7F84]">Based on 19 reviews</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="">
+              <div className="bg-gray-50 py-5 px-3 space-y-2 rounded-lg">
+                <div className="flex justify-between">
+                  <div className="flex gap-1">
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-6" src={blutik} alt="rating" />
+                  </div>
+                  <div>
+                    <Image className="w-6" src={google} alt="google" />
+                  </div>
+                </div>
+
+                <p className="text-[#8B7F84]">
+                  Always a pleasure to visit this store.A warm welcome from
+                  Mireille and I always come out with very good quality breast
+                  products at an unbeatable price.Their lipstick are amazing
+                  i...
+                </p>
+              </div>
+
+              <div className="flex 2xl:mt-6">
+                <div>
+                  <Image src={uuu} alt="google" />
+                </div>
+                <div className="ml-2">
+                  <p className="text-[#8B7F84] text-xl font-semibold ">
+                    AI-generated summary
+                  </p>
+                  <p className="text-[#8B7F84]">4 month ago</p>
+                </div>
+              </div>
+            </div>
+            <div className="">
+              <div className="bg-gray-50 py-5 px-3 space-y-2 rounded-lg">
+              <div className="flex justify-between">
+                  <div className="flex gap-1">
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-6" src={blutik} alt="rating" />
+                  </div>
+                  <div>
+                    <Image className="w-6" src={google} alt="google" />
+                  </div>
+                </div>
+
+                <p className="text-[#8B7F84]">
+                  I went to the MisaParis boutique,the staff is very welcoming
+                  and friendly.Personally i found the service and advice very
+                  interesting and the quantity of the products excellent.I
+                  recommend....
+                </p>
+              </div>
+
+              <div className="flex 2xl:mt-6">
+                <div>
+                  <Image src={rrr} alt="google" />
+                </div>
+                <div className="ml-2">
+                  <p className="text-[#8B7F84] text-xl font-semibold ">
+                    Ribero
+                  </p>
+                  <p className="text-[#8B7F84]">2 months ago</p>
+                </div>
+              </div>
+            </div>
+            <div className="">
+              <div className="bg-gray-50 py-5 px-3 space-y-2 rounded-lg">
+              <div className="flex justify-between">
+                  <div className="flex gap-1">
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-6" src={blutik} alt="rating" />
+                  </div>
+                  <div>
+                    <Image className="w-6" src={google} alt="google" />
+                  </div>
+                </div>
+
+                <p className="text-[#8B7F84]">
+                  I visited the MisaParis boutique on rue de Marignan in the 8th.A warm welcome and express makeup offered to test the products and I was won over by the HD fluid foundation.A visit to the store and you will...
+                </p>
+              </div>
+
+              <div className="flex 2xl:mt-6">
+                <div>
+                  <Image src={kkk} alt="google" />
+                </div>
+                <div className="ml-2">
+                  <p className="text-[#8B7F84] text-xl font-semibold ">
+                    Karion Diallo
+                  </p>
+                  <p className="text-[#8B7F84]">6 months ago</p>
+                </div>
+              </div>
+            </div>
+            <div className="">
+              <div className="bg-gray-50 py-5 px-3 space-y-2 rounded-lg">
+              <div className="flex justify-between">
+                  <div className="flex gap-1">
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-6" src={blutik} alt="rating" />
+                  </div>
+                  <div>
+                    <Image className="w-6" src={google} alt="google" />
+                  </div>
+                </div>
+
+                <p className="text-[#8B7F84]">
+                Very friendly welcome,quality products with a range of colors for all skin type,the textures are very pleasent,i highly recommend this preety Parisian brand.A visit to the store and you will
+                </p>
+              </div>
+
+              <div className="flex 2xl:mt-6">
+                <div>
+                  <Image src={iii} alt="google" />
+                </div>
+                <div className="ml-2">
+                  <p className="text-[#8B7F84] text-xl font-semibold rounded-lg">
+                    Ivideh Moghtader
+                  </p>
+                  <p className="text-[#8B7F84]">One year ago</p>
+                </div>
+              </div>
+            </div>
+            <div className="">
+              <div className="bg-gray-50 py-5 px-3 space-y-2">
+              <div className="flex justify-between">
+                  <div className="flex gap-1">
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-5" src={starr} alt="rating" />
+                    <Image className="w-6" src={blutik} alt="rating" />
+                  </div>
+                  <div>
+                    <Image className="w-6" src={google} alt="google" />
+                  </div>
+                </div>
+
+                <p className="text-[#8B7F84]">
+                A very welcome and accessible  setting for all with products designed for black and white skin at unbeatable price.I invite you to take a look because you will be satisfied with the service
+                </p>
+              </div>
+
+              <div className="flex 2xl:mt-6">
+                <div>
+                  <Image src={sss} alt="google" />
+                </div>
+                <div className="ml-2">
+                  <p className="text-[#8B7F84] text-xl font-semibold ">
+                    Safi Safi
+                  </p>
+                  <p className="text-[#8B7F84]">10 months ago</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="w-full  mt-24 lg:px-40 xl:px-44 2xl:px-48">
+            <Image className="w-full" src={rating1} alt="image" />
+            <Image className="w-full" src={rating2} alt="image" />
+          </div> */}
+
           {/* -----------section 8--------- */}
-          <div className="fontf lg:text-3xl xl:text-4xl 2xl:text-5xl mt-20 flex justify-center">
+          <div className="fontf lg:text-3xl xl:text-4xl 2xl:text-5xl 2xl:mt-36 flex justify-center">
             FOLLOW US ON INSTAGRAM
           </div>
-          <div className=" flex gap-6 mt-9">
+          <div className=" flex gap-6 2xl:mt-12">
             <div id="image2">
               <Image id="img1" className=" w-96 " src={r1} alt="image" />
               <div className="img3">
@@ -360,7 +635,7 @@ const Page = () => {
             </div>
           </div>
           {/* ----------section 9---------- */}
-          <div className="flex items-center justify-between lg:px-16 xl:px-24 2xl:px-28 mt-16">
+          <div className="flex items-center justify-between lg:px-16 xl:px-24 2xl:px-28 2xl:mt-20">
             <div>
               <div className="fontf lg:text-[30px] xl:text-[36px] 2xl:text-[46px] lg:pb-4 2xl:pb-7 ">
                 SUBSCRIBE TO OUR NEWS LETTER
@@ -385,9 +660,9 @@ const Page = () => {
             </div>
           </div>
 
-          <hr className="lg:mx-16 xl:mx-24 2xl:mx-28 lg:mt-14 xl:mt-20 border-t-2 border-[#315031] opacity-25" />
+          <hr className="lg:mx-16 xl:mx-24 2xl:mx-28 lg:mt-14 xl:mt-24 border-t-2 border-[#315031] opacity-25" />
           {/* ----------section 10------------------------- */}
-          <div className="lg:px-16 xl:px-24 2xl:px-28 mt-20">
+          <div className="lg:px-16 xl:px-24 2xl:px-28 xl:mt-24">
             <footer className="">
               <div className="flex flex-wrap justify-between">
                 <div className="space-y-3 w-[25%]">
