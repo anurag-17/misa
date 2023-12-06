@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import misa from "../../public/misa.svg";
@@ -28,13 +30,35 @@ import instagram from "../../public/instagram.png";
 import arrow from "../../public/arrow.png";
 import rating1 from "../../public/rating1.png";
 import rating2 from "../../public/rating2.png";
-import twitter from "../../public/twitter.png";
-import facebook from "../../public/facebook.png";
-import instag from "../../public/instagrams.png";
-import tiktok from "../../public/tiktok.png";
-import youtube from "../../public/youtube.png";
+import twitter from "../../public/twitter.svg";
+import facebook from "../../public/facebook.svg";
+import instag from "../../public/instag.svg";
+import tiktok from "../../public/tiktok.svg";
+import youtube from "../../public/youtube.svg";
+import xcross from "../../public/xcross.svg";
 
 const Page = () => {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const openSearch = () => {
+    setIsSearchOpen(true);
+  };
+
+  const closeSearch = () => {
+    setIsSearchOpen(false);
+  };
+
+  const performSearch = () => {
+    // Add your search functionality here
+    // For example, you can use the 'searchTerm' state to perform a search
+    console.log('Performing search for:', searchTerm);
+
+    // Close the search popup after performing the search
+    closeSearch();
+  };
+
+
   return (
     <>
       <section>
@@ -48,7 +72,30 @@ const Page = () => {
               className="absolute 2xl:w-52 xl:w-36 lg:w-32 "
             />
             <div className="flex 2xl:gap-9 ml-auto ">
-              <Image className="cursor-pointer w-6" src={search} alt="image" />
+
+            <div className="search-container">
+      {!isSearchOpen && (
+        <div className="search-icon" onClick={openSearch}>
+          <Image className="w-7 cursor-pointer" src={search} alt="image" />
+        </div>
+      )}
+      {isSearchOpen && (
+        <div className="search-popup flex items-center">
+          <span className="close-icon" onClick={closeSearch}>
+            <Image className="w-6 h-6" src={xcross} alt="cross" />
+          </span>
+          <input
+            className="border p-2 flex-grow" // Use flex-grow to allow the input to grow and take remaining space
+            type="text"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          
+        </div>
+      )}
+    </div>
+              
               <Image className="cursor-pointer w-6" src={user} alt="image" />
               <Image className="cursor-pointer w-6" src={basket} alt="image" />
             </div>
@@ -346,31 +393,31 @@ const Page = () => {
                 <div className="space-y-3 w-[25%]">
                   <Image className="mb-5" src={misa} alt="image" />
 
-                  <p className="lg:text-xs xl:text-sm 2xl:text-base">
+                  <p className="lg:text-xs xl:text-sm 2xl:text-sm">
                     Our products are certified “guaranteed French origin”
                     <br /> and environmentally friendly.
                   </p>
-                  <p className="lg:text-xs xl:text-sm 2xl:text-base">
+                  <p className="lg:text-xs xl:text-sm 2xl:text-sm">
                     All of our makeup products are formulated and manufactured
                     in France with natural ingredients and using sustainable
                     processes. Very high quality pigments.
                   </p>
 
-                  <div className="flex gap-4 pt-6">
+                  <div className="flex gap-6 pt-6">
                     <Link id="roundd" href="https://www.facebook.com">
-                      <Image src={twitter} />
+                      <Image className="w-8" src={twitter} />
                     </Link>
                     <Link id="roundd" href="https://www.instagram.com">
-                      <Image src={facebook} />
+                      <Image className="w-8" src={facebook} />
                     </Link>
                     <Link id="roundd" href="https://twitter.com">
-                      <Image src={instag} />
+                      <Image className="w-7" src={instag} />
                     </Link>
                     <Link id="roundd" href="https://tiktok.com">
-                      <Image src={tiktok} />
+                      <Image className="w-7" src={tiktok} />
                     </Link>
                     <Link id="roundd" href="https://youtube.com">
-                      <Image src={youtube} />
+                      <Image className="w-7" src={youtube} />
                     </Link>
                   </div>
                 </div>
@@ -379,7 +426,7 @@ const Page = () => {
                   <h2 className="lg:text-lg xl:text-xl mb-6 uppercase fontf ">
                     QUICK LINKS
                   </h2>
-                  <ul className="xl:text-sm 2xl:text-base dark:text-gray-400 lg:space-y-2 xl:space-y-2 2xl:space-y-3 ">
+                  <ul className="xl:text-sm 2xl:text-sm dark:text-gray-400 lg:space-y-2 xl:space-y-2 2xl:space-y-3 ">
                     <li className="">
                       <Link href="#" className="hover:underline">
                         Home And News
@@ -424,10 +471,10 @@ const Page = () => {
                 </div>
 
                 <div className=" ">
-                  <h2 className="mb-6   uppercase fontf text-xl">
+                  <h2 className="mb-6   uppercase fontf xl:text-xl">
                     CUSTOMER SERVICES
                   </h2>
-                  <ul className="xl:text-sm 2xl:text-base dark:text-gray-400 lg:space-y-2 xl:space-y-2 2xl:space-y-3 ">
+                  <ul className="xl:text-sm 2xl:text-sm dark:text-gray-400 lg:space-y-2 xl:space-y-2 2xl:space-y-3 ">
                     <li className="">
                       <Link href="#" className="hover:underline">
                         Delivery & Return
@@ -458,8 +505,8 @@ const Page = () => {
               <hr className="mt-14 xl:mx- 2xl:mx- lg:mx- md:mx- sm:mx- mx- border-t-2 border-[#315031] opacity-25" />
 
               <div className="xl:py-3 2xl:py-6 ">
-                <div className="xl:text-sm 2xl:text-base font-light  text-[#AAA] flex justify-center text-center ">
-                  © 2023 TALH All Rights Reserved.
+                <div className="xl:text-sm 2xl:text-base font-light  text-[#7D7D7D] flex justify-center text-center ">
+                  © 2023 MisaParis. All Rights Reserved.
                 </div>
               </div>
             </footer>
