@@ -29,6 +29,7 @@
       background-size: cover;
       background-size: 100%;
       background-position: top center;
+      
       /* padding-bottom: 30px; */
   }  
   #box1{
@@ -51,21 +52,32 @@
   #voilets{
     background-image: url(../../public/voilets.png);
   }
+
   @media (min-width:1536px) and (max-width:1800px){
   
     #main-img{
         padding-top: 250px;
     }
+    .collections{
+        margin-top: 25px !important;
+    }
     .bright{
-        font-size: 37px;
+        font-size: 50px !important ;
     }
     .lips{
-        padding-bottom: 30px;
+        padding-bottom: 40px !important;
     }
     .shop{
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-bottom: 100px;
+        padding-top: 17px !important;
+        padding-bottom: 17px !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        margin-bottom: 210px !important ;
+
+    }
+    .perleye{
+        padding-top: 170px !important;
+        padding-bottom: 170px !important;
 
     }
   }
@@ -109,7 +121,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 1); 
-    z-index: -1;
+    /* z-index: -1; */
 }
 #view1{
     animation: views 1s infinite alternate-reverse;
@@ -123,4 +135,3 @@
     }
     
 }
-  
