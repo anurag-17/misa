@@ -53,6 +53,35 @@
     background-image: url(../../public/voilets.png);
   }
 
+  @media (min-width:768px) and (max-width:950px){
+         #main-img{
+           padding-top:14% !important;
+           padding-bottom:12% !important ;
+         }
+         .bright{
+            font-size: 25px !important;
+        padding-bottom: 0 !important;
+         }
+         .lips{
+            font-size: 25px !important;
+            padding-bottom: 10% !important;
+         }
+        
+         .shop{
+            padding-top: 10px !important;
+        padding-bottom: 10px !important;
+        padding-left: 23px !important;
+        padding-right: 23px !important;
+         }
+    
+}
+
+@media (min-width:1024px) and (max-width:1170px){
+   .shop{
+    margin-bottom: 70px !important;
+   }
+}
+
   @media (min-width:1536px) and (max-width:1800px){
   
     #main-img{
