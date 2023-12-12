@@ -276,12 +276,12 @@ const Page = () => {
                 id="purple"
               >
                 <Image
-                  className="mx-auto h-72 sm:h-72 md:h-64 lg:h-80 xl:h-full py-4 md:py-4 lg:py-7 xl:py-"
+                  className="mx-auto h-72 sm:h-72 md:h-64 lg:h-80 xl:h-full  py-4 md:py-4 lg:py-7 xl:py-"
                   src={p1}
                   alt="image"
                 />
               </div>
-              <h1 className="tsmall flex justify-center md:text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-xl md:mt-3 lg:mt-5 xl:mt-7 ">
+              <h1 className="tsmall flex justify-center md:text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-xl  mt-3 md:mt-3 lg:mt-5 xl:mt-7 ">
                 CORRECTORS
               </h1>
             </div>
@@ -296,7 +296,7 @@ const Page = () => {
                   alt="image"
                 />
               </div>
-              <h1 className="tsmall flex justify-center md:text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-xl md:mt-3 lg:mt-5 xl:mt-7">
+              <h1 className="tsmall flex justify-center md:text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-xl mt-3 md:mt-3 lg:mt-5 xl:mt-7">
                 PERLY EYES COLLECTION
               </h1>
             </div>
@@ -311,7 +311,7 @@ const Page = () => {
                   alt="image"
                 />
               </div>
-              <h1 className="tsmall flex justify-center md:text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-xl md:mt-3 lg:mt-5 xl:mt-7">
+              <h1 className="tsmall flex justify-center md:text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-xl mt-3 md:mt-3 lg:mt-5 xl:mt-7">
                 BLUSH BLUSH
               </h1>
             </div>
@@ -329,7 +329,7 @@ const Page = () => {
                   alt="image"
                 />
               </div>
-              <h1 className="tsmall flex justify-center md:text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-xl md:mt-3 lg:mt-5 xl:mt-7">
+              <h1 className="tsmall flex justify-center md:text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-xl mt-3 md:mt-3 lg:mt-5 xl:mt-7">
                 SATIN LIPSTICKS
               </h1>
             </div>
@@ -344,7 +344,7 @@ const Page = () => {
                   alt="image"
                 />
               </div>
-              <h1 className="tsmall flex justify-center md:text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-xl md:mt-3 lg:mt-5 xl:mt-7">
+              <h1 className="tsmall flex justify-center md:text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-xl mt-3 md:mt-3 lg:mt-5 xl:mt-7">
                 FOUNDATIONS
               </h1>
             </div>
@@ -359,7 +359,7 @@ const Page = () => {
                   alt="image"
                 />
               </div>
-              <h1 className="tsmall flex justify-center md:text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-xl md:mt-3 lg:mt-5 xl:mt-7">
+              <h1 className="tsmall flex justify-center md:text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-xl mt-3 md:mt-3 lg:mt-5 xl:mt-7">
                 EYES
               </h1>
             </div>
@@ -393,36 +393,36 @@ const Page = () => {
             <div className="w-">
               <div className="w-full xl:h-[80%] 2xl:h-full" id="voilets">
                 <Image
-                  className="mx-auto py-3 sm:py-5 md:py-6 lg:py-12 h-80 sm:h-80 md:h-80 lg:h-96 2xl:h-full"
+                  className="mx-auto py-3 sm:py-5 md:py-6 xl:pb-16 lg:py-12 h-80 sm:h-80 md:h-80 lg:h-96 xl:h-full"
                   src={p7}
                   alt="image"
                 />
               </div>
-              <h1 className="tsmall flex justify-center text-[16px] md:text-[11px] lg:text-[12px] xl:text-[14px] 2xl:text-xl md:my-3 lg:my-4 xl:my-5">
+              <h1 className="tsmall flex justify-center text-[16px] md:text-[11px] lg:text-[12px] xl:text-[14px] 2xl:text-xl my-3 md:my-3 lg:my-4 xl:my-5">
                 SMOOTHING SMOOTHING BASE
               </h1>
             </div>
             <div className="">
               <div className="w-full xl:h-[80%] 2xl:h-full" id="voilets">
                 <Image
-                  className="mx-auto  py-3 sm:py-5 md:py-4   lg:py-10 h-80 sm:h-80  md:h-80 lg:h-96 2xl:h-full"
+                  className="mx-auto  py-3 sm:py-5 md:py-4   lg:py-10 h-80 sm:h-80  md:h-80 lg:h-96 xl:h-full"
                   src={p8}
                   alt="image"
                 />
               </div>
-              <h1 className="tsmall flex justify-center sm:text-[16px] md:text-[11px] lg:text-[12px] xl:text-[14px] 2xl:text-xl md:my-3 lg:my-4 xl:my-5">
+              <h1 className="tsmall flex justify-center sm:text-[16px] md:text-[11px] lg:text-[12px] xl:text-[14px] 2xl:text-xl my-3 md:my-3 lg:my-4 xl:my-5">
                 EYE LINER LIKER BLACK
               </h1>
             </div>
             <div className="">
               <div className="w-full xl:h-[80%] 2xl:h-full" id="voilets">
                 <Image
-                  className="mx-auto py-3 sm:py-5 md:py-4 lg:py-9 h-80 sm:h-80  md:h-80 lg:h-96 2xl:h-full"
+                  className="mx-auto py-3 sm:py-5 md:py-4 lg:py-9 h-80 sm:h-80  md:h-80 lg:h-96 xl:h-full"
                   src={p9}
                   alt="image"
                 />
               </div>
-              <h1 className="tsmall flex justify-center sm:text-[16px] md:text-[11px] lg:text-[12px] xl:text-[14px] 2xl:text-xl md:my-3 lg:my-4 xl:my-5">
+              <h1 className="tsmall flex justify-center sm:text-[16px] md:text-[11px] lg:text-[12px] xl:text-[14px] 2xl:text-xl my-3 md:my-3 lg:my-4 xl:my-5">
                 LIPLIKER LIPSTICK MISAPARIS
               </h1>
             </div>
@@ -434,28 +434,29 @@ const Page = () => {
           </div> */}
 
           <div className="px-3 sm:px-5 md:px-12 lg:px-16 xl:px-24 2xl:px-28 mt-10 sm:mt-10 md:mt-10 lg:mt-12 xl:mt-8 2xl:mt-44">
-            <div className="grid grid-cols-2 gap-y-4 sm:gap-y-0: sm:grid-cols-4 justify-between py-4 sm:py-5 md:py-8 lg:py-12 xl:py-14 2xl:py-16 px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20  bg-black">
-              <Image
-                className="w-36 sm:w-24 md:w-28 lg:w-40 xl:w-44  2xl:w-64"
-                src={g1}
-                alt="image"
-              />
-              <Image
-                className="w-36 sm:w-24 md:w-28 lg:w-40 xl:w-44  2xl:w-64"
-                src={g2}
-                alt="image"
-              />
-              <Image
-                className="w-36 sm:w-24 md:w-28 lg:w-40 xl:w-44  2xl:w-64"
-                src={g3}
-                alt="image"
-              />
-              <Image
-                className="w-36 sm:w-24 md:w-28 lg:w-40 xl:w-44  2xl:w-64"
-                src={g4}
-                alt="image"
-              />
-            </div>
+          <div className="flex flex-wrap justify-between py-4 sm:py-5 md:py-8 lg:py-12 xl:py-14 2xl:py-16 px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20 bg-black">
+  <Image
+    className="w-36 sm:w-28 md:w-32 lg:w-44 xl:w-48 2xl:w-72 mb-4 sm:mb-0"
+    src={g1}
+    alt="image"
+  />
+  <Image
+    className="w-36 sm:w-24 md:w-28 lg:w-40 xl:w-44 2xl:w-64 mb-4 sm:mb-0"
+    src={g2}
+    alt="image"
+  />
+  <Image
+    className="w-36 sm:w-24 md:w-28 lg:w-40 xl:w-44 2xl:w-64 mb-4 sm:mb-0"
+    src={g3}
+    alt="image"
+  />
+  <Image
+    className="w-36 sm:w-24 md:w-28 lg:w-40 xl:w-44 2xl:w-64 mb-4 sm:mb-0"
+    src={g4}
+    alt="image"
+  />
+</div>
+
           </div>
           {/* ----------section 7---------- */}
           <div className="mx-12 sm:mx-20 md:mx-28 lg:mx-40 xl:mx-48 2xl:mx-64 bg-gray-50 py-4 sm:py-4 md:py-7 rounded-lg mt-12 sm:mt-16 md:mt-16 lg:mt-20 xl:mt-24 2xl:mt-36">
@@ -554,7 +555,7 @@ const Page = () => {
                     src={righttik}
                     alt="righttik"
                   />
-                  <p className="text-[#8B7F84]  text-[8px] sm:text-[8px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg">
+                  <p className="text-[#8B7F84]  text-[10px] sm:text-[10px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg">
                     Warm welcome from Mireille
                   </p>
                 </div>
@@ -564,7 +565,7 @@ const Page = () => {
                     src={righttik}
                     alt="righttik"
                   />
-                  <p className="text-[#8B7F84] text-[8px] sm:text-[8px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg">
+                  <p className="text-[#8B7F84] text-[10px] sm:text-[10px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg">
                     Unbeatable price
                   </p>
                 </div>
@@ -574,7 +575,7 @@ const Page = () => {
                     src={righttik}
                     alt="righttik"
                   />
-                  <p className="text-[#8B7F84] text-[8px] sm:text-[8px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg ">
+                  <p className="text-[#8B7F84] text-[10px] sm:text-[10px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg ">
                     Quality products
                   </p>
                 </div>
@@ -643,7 +644,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <p className="text-[#8B7F84] text-[8px] sm:text-[8px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg  md:leading-4">
+                <p className="text-[#8B7F84] text-[10px] sm:text-[10px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg  md:leading-4">
                   Always a pleasure to visit this store.A warm welcome from
                   Mireille and I always come out with very good quality breast
                   products at an unbeatable price.Their lipstick are amazing
@@ -713,7 +714,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <p className="text-[#8B7F84] text-[8px] sm:text-[8px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg md:leading-4">
+                <p className="text-[#8B7F84] text-[10px] sm:text-[10px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg md:leading-4">
                   I went to the MisaParis boutique,the staff is very welcoming
                   and friendly.Personally i found the service and advice very
                   interesting and the quantity of the products excellent.I
@@ -783,12 +784,12 @@ const Page = () => {
                   </div>
                 </div>
 
-                <p className="text-[#8B7F84] text-[8px] sm:text-[8px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg md:leading-4">
+                <p className="text-[#8B7F84] text-[10px] sm:text-[10px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg md:leading-4">
                   I visited the MisaParis boutique on rue de Marignan in the
                   8th.A warm welcome and express makeup offered to test the
                   products and I was won over by the HD fluid foundation.A visit
                   to the store and you will...
-                </p>
+                </p>  
               </div>
 
               <div className="flex md:mt-4 lg:mt-4 2xl:mt-6">
@@ -853,7 +854,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <p className="text-[#8B7F84] text-[8px] sm:text-[8px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg md:leading-4">
+                <p className="text-[#8B7F84] text-[10px] sm:text-[10px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg md:leading-4">
                   Very friendly welcome,quality products with a range of colors
                   for all skin type,the textures are very pleasent,i highly
                   recommend this preety Parisian brand.A visit to the store and
@@ -923,7 +924,7 @@ const Page = () => {
                   </div>
                 </div>
 
-                <p className="text-[#8B7F84] text-[8px] sm:text-[8px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg md:leading-4">
+                <p className="text-[#8B7F84] text-[10px] sm:text-[10px] md:text-[10px] lg:text-[10px] xl:text-[13px] 2xl:text-lg md:leading-4">
                   A very welcome and accessible setting for all with products
                   designed for black and white skin at unbeatable price.I invite
                   you to take a look because you will be satisfied with the
@@ -1045,30 +1046,35 @@ const Page = () => {
                       <Image
                         className="w-5 sm:w-5 md:w-6 lg:w-4 xl:w-4  2xl:w-8"
                         src={twitter}
+                        alt="image"
                       />
                     </Link>
                     <Link id="roundd" href="https://www.facebook.com">
                       <Image
                         className="w-5 sm:w-5 md:w-6 lg:w-4 xl:w-4  2xl:w-8"
                         src={facebook}
+                        alt="image"
                       />
                     </Link>
                     <Link id="roundd" href="https://instagram.com">
                       <Image
                         className="w-5 sm:w-5 md:w-6 lg:w-4 xl:w-4  2xl:w-7"
                         src={instag}
+                        alt="image"
                       />
                     </Link>
                     <Link id="roundd" href="https://tiktok.com">
                       <Image
                         className="w-5 sm:w-5 md:w-6 lg:w-4 xl:w-4  2xl:w-7"
                         src={tiktok}
+                        alt="image"
                       />
                     </Link>
                     <Link id="roundd" href="https://youtube.com">
                       <Image
                         className="w-5 sm:w-5 md:w-6 lg:w-4 xl:w-4  2xl:w-7"
                         src={youtube}
+                        alt="image"
                       />
                     </Link>
                   </div>
@@ -1078,7 +1084,7 @@ const Page = () => {
                   <h2 className=" lg:text-[14px] xl:text-[15px] 2xl:text-xl  uppercase fontf ">
                     QUICK LINKS
                   </h2>
-                  <ul className="text-[12px] sm:text-[12px] md:text-[12px] mt-3 md:mt-3 lg:mt-5 xl:mt-6 2xl:mt-6 lg:text-[9px] xl:text-[10px] 2xl:text-sm dark:text-gray-400 md:space-y-1 lg:space-y-2 xl:space-y-2 2xl:space-y-3 ">
+                  <ul className="text-[12px] sm:text-[12px] md:text-[12px] mt-3 md:mt-3 lg:mt-5 xl:mt-6 2xl:mt-6 lg:text-[9px] xl:text-[10px] 2xl:text-sm md:space-y-1 lg:space-y-2 xl:space-y-2 2xl:space-y-3 ">
                     <li className="">
                       <Link href="#" className="hover:underline">
                         Home And News
@@ -1126,7 +1132,7 @@ const Page = () => {
                   <h2 className="   uppercase fontf lg:text-[14px] xl:text-[15px] 2xl:text-xl">
                     CUSTOMER SERVICES
                   </h2>
-                  <ul className="mt-3 sm:mt-3 text-[12px] sm:text-[12px] md:text-[12px] md:mt-3 lg:mt-5 xl:mt-6 2xl:mt-6 lg:text-[9px] xl:text-[10px] 2xl:text-sm dark:text-gray-400 md:space-y-1 lg:space-y-2 xl:space-y-2 2xl:space-y-3 ">
+                  <ul className="mt-3 sm:mt-3 text-[12px] sm:text-[12px] md:text-[12px] md:mt-3 lg:mt-5 xl:mt-6 2xl:mt-6 lg:text-[9px] xl:text-[10px] 2xl:text-sm  md:space-y-1 lg:space-y-2 xl:space-y-2 2xl:space-y-3 ">
                     <li className="">
                       <Link href="#" className="hover:underline">
                         Delivery & Return
@@ -1157,7 +1163,7 @@ const Page = () => {
               <hr className="mt-14 xl:mx- 2xl:mx- lg:mx- md:mx- sm:mx- mx- border opacity-80" />
 
               <div className="py-2 lg:py-3 xl:py-3 2xl:py-6 ">
-                <div className="sm:text-[10px] md:text-[10px] lg:text-[9px] xl:text-[11px] 2xl:text-base font-light  text-[#7D7D7D] flex justify-center text-center ">
+                <div className="text-[10px] sm:text-[10px] md:text-[10px] lg:text-[9px] xl:text-[11px] 2xl:text-base font-light  text-[#7D7D7D] flex justify-center text-center ">
                   © 2023 MisaParis. All Rights Reserved.
                 </div>
               </div>
