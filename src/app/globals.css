@@ -53,6 +53,41 @@
     background-image: url(../../public/voilets.png);
   }
 
+  @media (min-width:320px) and (max-width:480px){
+    #main-img{
+        padding-top: 0 !important;
+    }
+    .bright{
+        font-size: 17px !important;
+    padding-bottom: 0 !important;
+     }
+     .lips{
+        font-size: 17px !important;
+        padding-bottom: 15% !important;
+     }
+    .star1{
+        display: block !important;
+        /* flex-direction: column !important; */
+    }
+    .tsmall{
+        font-size:14px !important;
+    }
+    .arrival{
+        margin-top: 30px !important;
+     }
+     .perleye{
+        padding-top: 10px;
+     }
+    
+  }
+
+
+  @media (min-width:640px) and (max-width:700px){
+    .arrival{
+        margin-top: 0 !important;
+    }
+  }
+
   @media (min-width:768px) and (max-width:950px){
          #main-img{
            padding-top:14% !important;
@@ -72,6 +107,12 @@
         padding-bottom: 10px !important;
         padding-left: 23px !important;
         padding-right: 23px !important;
+         }
+         .now{
+            margin-bottom: 90px !important;
+         }
+         .arrival{
+            margin-top: 20px !important;
          }
     
 }
@@ -94,6 +135,7 @@
         font-size: 50px !important ;
     }
     .lips{
+        font-size: 50px !important ;
         padding-bottom: 40px !important;
     }
     .shop{
@@ -105,9 +147,19 @@
 
     }
     .perleye{
-        padding-top: 170px !important;
-        padding-bottom: 170px !important;
+        font-size: 50px !important;
+        padding-top: 90px !important;
+        /* padding-bottom: 170px !important; */
 
+    }
+    .collection{
+        font-size: 50px !important;
+    }
+    .fot-makup{
+        width: 30% !important;
+    }
+    .country{
+        width: 15% !important;
     }
   }
 
@@ -164,3 +216,44 @@
     }
     
 }
+
+
+/* ---------side navbar------- */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* padding-top: 60px; */
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 9px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: -19px;
+    right: 0px;
+    font-size: 28px;
+    margin-left: 50px;
+  }
+
+  @media screen and (max-height: 450px) {
+    .sidenav { padding-top: 0px; }
+    /* .sidenav a { font-size: 18px; } */
+  }
