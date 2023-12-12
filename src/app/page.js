@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import misa from "../../public/misa.svg";
@@ -46,8 +46,12 @@ import rrr from "../../public/salpha.svg";
 import kkk from "../../public/kalpha.svg";
 import iii from "../../public/ialpha.svg";
 import sss from "../../public/salpha.svg";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Page = () => {
+
+
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [sidenavWidth, setSidenavWidth] = useState(0);
@@ -76,6 +80,11 @@ const Page = () => {
     // Close the search popup after performing the search
     closeSearch();
   };
+
+  useEffect(()=>{
+  
+    AOS.init({duration:1000});
+    },[]);
 
   return (
     <>
@@ -251,7 +260,7 @@ const Page = () => {
             id="main-img"
             className="mt-[45px] sm:mt-[45px] md:mt-[69px] lg:mt-[90px] 2xl:mt-32 flex 2xl:pt-72 xl:pt-52 lg:pt-48   py-20 sm:py-20  md:py-40 lg:py-0"
           >
-            <div className="px-5 sm:px-5 md:px-12 lg:px-16 xl:px-24 2xl:px-28  middle-text">
+            <div data-aos="fade-right" className="px-5 sm:px-5 md:px-12 lg:px-16 xl:px-24 2xl:px-28  middle-text">
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-6xl md:pb-1 lg:pb-1 xl:pb-2 2xl:pb-4 bright fontf">
                 BRIGHT
               </div>
