@@ -258,3 +258,18 @@
     .sidenav { padding-top: 0px; }
     /* .sidenav a { font-size: 18px; } */
   }
+
+  /* -------animation--------- */
+  
+  .now:hover {
+    box-shadow: 0px 0px 26px 8px hsla(15, 96%, 49%, 0.664);
+    background-color: rgb(197, 81, 28);
+    transition: box-shadow 0.3s ease-in-out, background-color 0.5s ease-in-out;
+  }
+  .shop:hover{
+    border: 2px solid #111;
+    box-shadow: 0px 0px 26px 8px hsla(323, 87%, 50%, 0.664);
+    background-color: #000428;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.5s ease-in-out;
+  }
+  

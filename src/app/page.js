@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import misa from "../../public/misa.svg";
@@ -46,12 +46,10 @@ import rrr from "../../public/salpha.svg";
 import kkk from "../../public/kalpha.svg";
 import iii from "../../public/ialpha.svg";
 import sss from "../../public/salpha.svg";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Page = () => {
-
-
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [sidenavWidth, setSidenavWidth] = useState(0);
@@ -81,16 +79,18 @@ const Page = () => {
     closeSearch();
   };
 
-  useEffect(()=>{
-  
-    AOS.init({duration:1000});
-    },[]);
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   return (
     <>
       <section>
         <div className="container-fluid" id="family">
           <div
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
             className="z-50 fixed  
                 w-full top-0 left-0 bg-white"
           >
@@ -170,7 +170,7 @@ const Page = () => {
                   {!isSearchOpen && (
                     <div className="search-icon" onClick={openSearch}>
                       <Image
-                        className="w-4 sm:w-4 md:w-3 lg:w-[75%] xl:w-4 2xl:w-7  cursor-pointer"
+                        className="w-4 sm:w-4 md:w-3 lg:w-[75%] xl:w-4 2xl:w-7  cursor-pointer "
                         src={search}
                         alt="image"
                       />
@@ -197,7 +197,7 @@ const Page = () => {
                 </div>
 
                 <Image
-                  className="cursor-pointer w-[15px] sm:w-[15px] md:w-[11px] lg:w-4 xl:w-4 2xl:w-6"
+                  className="cursor-pointer w-[15px] sm:w-[15px] md:w-[11px] lg:w-4 xl:w-4 2xl:w-6 "
                   src={user}
                   alt="image"
                 />
@@ -260,32 +260,38 @@ const Page = () => {
             id="main-img"
             className="mt-[45px] sm:mt-[45px] md:mt-[69px] lg:mt-[90px] 2xl:mt-32 flex 2xl:pt-72 xl:pt-52 lg:pt-48   py-20 sm:py-20  md:py-40 lg:py-0"
           >
-            <div data-aos="fade-right" className="px-5 sm:px-5 md:px-12 lg:px-16 xl:px-24 2xl:px-28  middle-text">
+            <div
+              data-aos="fade-right"
+              className="px-5 sm:px-5 md:px-12 lg:px-16 xl:px-24 2xl:px-28  middle-text"
+            >
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-6xl md:pb-1 lg:pb-1 xl:pb-2 2xl:pb-4 bright fontf">
                 BRIGHT
               </div>
               <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-6xl pb-4 sm:pb-4 md:pb-6 lg:pb-10 xl:pb-10 2xl:pb-16  lips fontf">
                 MOVING LIPS
               </div>
-              <button className="lg:mb-36 xl:mb-56  2xl:mb-60 border border-black rounded-full py-1 sm:py-2 md:py-2 lg:py-3 xl:py-3 2xl:py-5 px-3 sm:px-5 md:px-7 lg:px-8 xl:px-9 2xl:px-14 text-[8px] sm:text-[8px] md:text-[8px] lg:text-[9px] xl:text-[10px] 2xl:text-[16px] font-medium shop">
+              <button className="lg:mb-36 xl:mb-56  2xl:mb-60 border border-black rounded-full py-1 sm:py-2 md:py-2 lg:py-3 xl:py-3 2xl:py-5 px-3 sm:px-5 md:px-7 lg:px-8 xl:px-9 2xl:px-14 text-[8px] sm:text-[8px] md:text-[8px] lg:text-[9px] xl:text-[10px] 2xl:text-[16px] font-medium shop  hover:text-white hover:font-semibold">
                 SHOP NOW
               </button>
             </div>
           </div>
           {/* ----------section 2---------- */}
 
-          <div className="collections text-[22px] sm:text-[24px] md:text-xl lg:text-3xl xl:text-3xl  2xl:text-5xl mt-5 sm:mt-6 md:mt-6 lg:mt-14 xl:mt-4 2xl:mt-32 flex justify-center fontf">
+          <div className="collections text-[22px] sm:text-[24px] md:text-xl lg:text-3xl xl:text-3xl  2xl:text-5xl mt-5 sm:mt-6 md:mt-6 lg:mt-14 xl:mt-4 2xl:mt-32 flex justify-center fontf ">
             OUR COLLECTIONS
           </div>
 
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 justify-around px-24 sm:px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-6 lg:mt-9 xl:mt-12 2xl:mt-16">
+          <div
+            data-aos="zoom-in"
+            className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 justify-around px-24 sm:px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-6 lg:mt-9 xl:mt-12 2xl:mt-16"
+          >
             <div className="">
               <div
                 className=" 2xl:w-full  md:h-[90%] xl:h-[80%] 2xl:h-full"
                 id="purple"
               >
                 <Image
-                  className="mx-auto h-72 sm:h-72 md:h-64 lg:h-80 xl:h-full  py-4 md:py-4 lg:py-7 xl:py-"
+                  className="mx-auto h-72 sm:h-72 md:h-64 lg:h-80 xl:h-full  py-4 md:py-4 lg:py-7 xl:py-  hover:scale-110 ease-in duration-500 cursor-pointer hover:drop-shadow-2xl"
                   src={p1}
                   alt="image"
                 />
@@ -300,7 +306,7 @@ const Page = () => {
                 id="purple"
               >
                 <Image
-                  className="mx-auto h-72 sm:h-72 md:h-64 lg:h-80 xl:h-full py-4 md:py-4 lg:py-7 xl:py-12"
+                  className="mx-auto h-72 sm:h-72 md:h-64 lg:h-80 xl:h-full py-4 md:py-4 lg:py-7 xl:py-12 hover:scale-110 ease-in duration-500 cursor-pointer hover:drop-shadow-2xl"
                   src={p2}
                   alt="image"
                 />
@@ -315,10 +321,10 @@ const Page = () => {
                 id="purple"
               >
                 <Image
-                  className="mx-auto h-72 sm:h-72 md:h-64 lg:h-80 xl:h-full py-4 md:py-4 lg:py-7 xl:py-9"
+                  className="mx-auto h-72 sm:h-72 md:h-64 lg:h-80 xl:h-full py-4 md:py-4 lg:py-7 xl:py-9 hover:scale-110 ease-in duration-500 cursor-pointer hover:drop-shadow-2xl"
                   src={p3}
                   alt="image"
-                />
+                />  
               </div>
               <h1 className="tsmall flex justify-center md:text-[10px] lg:text-[12px] xl:text-[14px] 2xl:text-xl mt-3 md:mt-3 lg:mt-5 xl:mt-7">
                 BLUSH BLUSH
@@ -326,14 +332,17 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 justify-around px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-7 md:mt-8 lg:mt-7 xl:-mt-1 2xl:mt-36">
+          <div
+            data-aos="zoom-in"
+            className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 justify-around px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-7 md:mt-8 lg:mt-7 xl:-mt-1 2xl:mt-36"
+          >
             <div className="">
               <div
                 className="w-full  md:h-[90%] xl:h-[80%] 2xl:h-full"
                 id="purple"
               >
                 <Image
-                  className="mx-auto h-72 sm:h-72 md:h-64 lg:h-80 xl:h-full py-4 md:py-4 lg:py-7 xl:py-9"
+                  className="mx-auto h-72 sm:h-72 md:h-64 lg:h-80 xl:h-full py-4 md:py-4 lg:py-7 xl:py-9 hover:scale-110 ease-in duration-500 cursor-pointer "
                   src={p4}
                   alt="image"
                 />
@@ -348,7 +357,7 @@ const Page = () => {
                 id="purple"
               >
                 <Image
-                  className="mx-auto h-72 sm:h-72 md:h-64 lg:h-80 xl:h-full py-4 md:py-4 lg:py-7 xl:py-9"
+                  className="mx-auto h-72 sm:h-72 md:h-64 lg:h-80 xl:h-full py-4 md:py-4 lg:py-7 xl:py-9 hover:scale-110 ease-in duration-500 cursor-pointer "
                   src={p5}
                   alt="image"
                 />
@@ -363,7 +372,7 @@ const Page = () => {
                 id="purple"
               >
                 <Image
-                  className="mx-auto h-72 sm:h-72 md:h-64 lg:h-80 xl:h-full py-4 md:py-4 lg:py-7 xl:py-9"
+                  className="mx-auto h-72 sm:h-72 md:h-64 lg:h-80 xl:h-full py-4 md:py-4 lg:py-7 xl:py-9 hover:scale-110 ease-in duration-500 cursor-pointer "
                   src={p6}
                   alt="image"
                 />
@@ -378,7 +387,12 @@ const Page = () => {
             className="px-28 mt-10 md:mt-14 lg:mt-20 xl:mt-10 2xl:mt-44"
             id="box1"
           >
-            <div className="flex flex-col  items-center sm:pr-10 md:pr-14 lg:pr-16 xl:pr-20 2xl:pr-20 py- lg:py-36 xl:py-40 2xl:py-64 text-white perleye">
+            <div
+              data-aos="fade-right"
+              data-aos-offset="300"
+              data-aos-easing="ease-in-sine"
+              className="flex flex-col  items-center sm:pr-10 md:pr-14 lg:pr-16 xl:pr-20 2xl:pr-20 py- lg:py-36 xl:py-40 2xl:py-64 text-white perleye"
+            >
               <div className="perleye fontf sm:text-[22px] md:text-[28px] pt-20 sm:pt-24 md:pt-28 lg:pt-0  lg:text-[35px] xl:text-[40px] 2xl:text-[54px]">
                 PERLAY EYES
               </div>
@@ -386,7 +400,7 @@ const Page = () => {
                 COLLECTION
               </div>
               <div>
-                <button className="now lg:mb-0 md:mb-28 sm:mb-20 mb-[100%] sm:mr-[73px] md:mr-[90px] lg:mr-[110px] xl:mr-[120px] 2xl:mr-40  text-[8px] sm:text-[8px] md:text-[9px] lg:text-[10px] xl:text-[10px] 2xl:text-[16px] px-2 sm:px-3 md:px-5 lg:px-7  xl:px-10  2xl:px-12 py-1 sm:py-1 md:py-2 lg:py-2 xl:py-4 2xl:py-4 mt- sm:mt-5 md:mt-6  lg:mt-7 xl:mt-10 2xl:xl:mt-10 border border-white rounded-full">
+                <button className="now lg:mb-0 md:mb-28 sm:mb-20 mb-[100%] sm:mr-[73px] md:mr-[90px] lg:mr-[110px] xl:mr-[120px] 2xl:mr-40  text-[8px] sm:text-[8px] md:text-[9px] lg:text-[10px] xl:text-[10px] 2xl:text-[16px] px-2 sm:px-3 md:px-5 lg:px-7  xl:px-10  2xl:px-12 py-1 sm:py-1 md:py-2 lg:py-2 xl:py-4 2xl:py-4 mt- sm:mt-5 md:mt-6  lg:mt-7 xl:mt-10 2xl:xl:mt-10 border border-white rounded-full  hover:font-semibold">
                   SHOP NOW
                 </button>
               </div>
@@ -394,15 +408,22 @@ const Page = () => {
           </div>
 
           {/* ---------SECTION 5---------- */}
-          <div className="arrival text-[22px] sm:text-[24px] md:text-xl lg:text-3xl  xl:text-3xl 2xl:text-5xl mt-10 sm:mt-10 md:mt-14 lg:mt-20 xl:mt-20 2xl:mt-24 flex justify-center fontf">
+          <div
+            data-aos="fade-right"
+            className="arrival text-[22px] sm:text-[24px] md:text-xl lg:text-3xl  xl:text-3xl 2xl:text-5xl mt-10 sm:mt-10 md:mt-14 lg:mt-20 xl:mt-20 2xl:mt-24 flex justify-center fontf"
+          >
             NEW ARRIVAL
           </div>
 
-          <div className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 justify-around px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-5 lg:mt-8 xl:mt-10 2xl:mt-20">
+          <div
+            data-aos="fade-up"
+            data-aos-anchor-placement="top-bottom"
+            className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 justify-around px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-5 lg:mt-8 xl:mt-10 2xl:mt-20"
+          >
             <div className="w-">
               <div className="w-full xl:h-[80%] 2xl:h-full" id="voilets">
                 <Image
-                  className="mx-auto py-3 sm:py-5 md:py-6 xl:pb-16 lg:py-12 h-80 sm:h-80 md:h-80 lg:h-96 xl:h-full"
+                  className="mx-auto py-3 sm:py-5 md:py-6 xl:pb-16 lg:py-12 h-80 sm:h-80 md:h-80 lg:h-96 xl:h-full hover:scale-110 ease-in duration-500 cursor-pointer hover:drop-shadow-2xl"
                   src={p7}
                   alt="image"
                 />
@@ -414,7 +435,7 @@ const Page = () => {
             <div className="">
               <div className="w-full xl:h-[80%] 2xl:h-full" id="voilets">
                 <Image
-                  className="mx-auto  py-3 sm:py-5 md:py-4   lg:py-10 h-80 sm:h-80  md:h-80 lg:h-96 xl:h-full"
+                  className="mx-auto  py-3 sm:py-5 md:py-4   lg:py-10 h-80 sm:h-80  md:h-80 lg:h-96 xl:h-full hover:scale-110 ease-in duration-500 cursor-pointer"
                   src={p8}
                   alt="image"
                 />
@@ -426,7 +447,7 @@ const Page = () => {
             <div className="">
               <div className="w-full xl:h-[80%] 2xl:h-full" id="voilets">
                 <Image
-                  className="mx-auto py-3 sm:py-5 md:py-4 lg:py-9 h-80 sm:h-80  md:h-80 lg:h-96 xl:h-full"
+                  className="mx-auto py-3 sm:py-5 md:py-4 lg:py-9 h-80 sm:h-80  md:h-80 lg:h-96 xl:h-full hover:scale-110 ease-in duration-500 cursor-pointer "
                   src={p9}
                   alt="image"
                 />
@@ -443,32 +464,35 @@ const Page = () => {
           </div> */}
 
           <div className="px-3 sm:px-5 md:px-12 lg:px-16 xl:px-24 2xl:px-28 mt-10 sm:mt-10 md:mt-10 lg:mt-12 xl:mt-8 2xl:mt-44">
-          <div className="flex flex-wrap justify-between py-4 sm:py-5 md:py-8 lg:py-12 xl:py-14 2xl:py-16 px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20 bg-black">
-  <Image
-    className="w-36 sm:w-28 md:w-32 lg:w-44 xl:w-48 2xl:w-72 mb-4 sm:mb-0"
-    src={g1}
-    alt="image"
-  />
-  <Image
-    className="w-36 sm:w-24 md:w-28 lg:w-40 xl:w-44 2xl:w-64 mb-4 sm:mb-0"
-    src={g2}
-    alt="image"
-  />
-  <Image
-    className="w-36 sm:w-24 md:w-28 lg:w-40 xl:w-44 2xl:w-64 mb-4 sm:mb-0"
-    src={g3}
-    alt="image"
-  />
-  <Image
-    className="w-36 sm:w-24 md:w-28 lg:w-40 xl:w-44 2xl:w-64 mb-4 sm:mb-0"
-    src={g4}
-    alt="image"
-  />
-</div>
-
+            <div className="flex flex-wrap justify-between py-4 sm:py-5 md:py-8 lg:py-12 xl:py-14 2xl:py-16 px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20 bg-black">
+              <Image
+                data-aos="flip-left"
+                className=" w-36 sm:w-28 md:w-32 lg:w-44 xl:w-48 2xl:w-72 mb-4 sm:mb-0"
+                src={g1}
+                alt="image"
+              />
+              <Image
+                data-aos="flip-left"
+                className="w-36 sm:w-24 md:w-28 lg:w-40 xl:w-44 2xl:w-64 mb-4 sm:mb-0"
+                src={g2}
+                alt="image"
+              />
+              <Image
+                data-aos="flip-left"
+                className="w-36 sm:w-24 md:w-28 lg:w-40 xl:w-44 2xl:w-64 mb-4 sm:mb-0"
+                src={g3}
+                alt="image"
+              />
+              <Image
+                data-aos="flip-left"
+                className="w-36 sm:w-24 md:w-28 lg:w-40 xl:w-44 2xl:w-64 mb-4 sm:mb-0"
+                src={g4}
+                alt="image"
+              />
+            </div>
           </div>
           {/* ----------section 7---------- */}
-          <div className="mx-12 sm:mx-20 md:mx-28 lg:mx-40 xl:mx-48 2xl:mx-64 bg-gray-50 py-4 sm:py-4 md:py-7 rounded-lg mt-12 sm:mt-16 md:mt-16 lg:mt-20 xl:mt-24 2xl:mt-36">
+          <div className="mx-12 sm:mx-20 md:mx-28 lg:mx-40 xl:mx-48 2xl:mx-64 bg-gray-50 hover:bg-slate-100 py-4 sm:py-4 md:py-7 rounded-lg mt-12 sm:mt-16 md:mt-16 lg:mt-20 xl:mt-24 2xl:mt-36">
             <div className="flex justify-between items-center px-4">
               <div className="flex">
                 <div className="">
@@ -515,16 +539,21 @@ const Page = () => {
                 </div>
               </div>
               <div>
-                <button className="bg-[#F2F2F3] px-3 sm:px-3 md:px-3 lg:px-4 xl:px-4 2xl:px-8 py-2 sm:py-2 md:py-1 lg:py-2 xl:py-3 2xl:py-3 text-[10px] sm:text-[10px] md:text-[11px] lg:text-[13px] xl:text-[13px] 2xl:text-lg rounded-lg ">
+                <button className="bg-[#F2F2F3] hover:bg-slate-200 px-3 sm:px-3 md:px-3 lg:px-4 xl:px-4 2xl:px-8 py-2 sm:py-2 md:py-1 lg:py-2 xl:py-3 2xl:py-3 text-[10px] sm:text-[10px] md:text-[11px] lg:text-[13px] xl:text-[13px] 2xl:text-lg rounded-lg ">
                   Leave a comment
                 </button>
               </div>
             </div>
           </div>
 
-          <div className="star1 mx-12 sm:mx-20 md:mx-28 lg:mx-40 xl:mx-48 2xl:mx-64 mt-4 sm:mt-4 md:mt-5 lg:mt-5 2xl:mt-4 grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 md:gap-5">
+          <div
+            data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
+            className="star1 mx-12 sm:mx-20 md:mx-28 lg:mx-40 xl:mx-48 2xl:mx-64 mt-4 sm:mt-4 md:mt-5 lg:mt-5 2xl:mt-4 grid grid-cols-1 md:grid-cols-3 gap-2 sm:gap-3 md:gap-5"
+          >
             <div className="">
-              <div className="bg-gray-50 py-5 px-3  2xl:space-y-1 rounded-lg ">
+              <div className="bg-gray-50 hover:bg-slate-100 py-5 px-3  2xl:space-y-1 rounded-lg ">
                 <div className="flex gap-1">
                   <Image
                     className="w-3 sm:w-3 md:w-3 lg:w-3 xl:w-3 2xl:w-5"
@@ -610,7 +639,7 @@ const Page = () => {
             </div>
 
             <div className="">
-              <div className="bg-gray-50 py-5 px-3 space-y-2 rounded-lg">
+              <div className="bg-gray-50 hover:bg-slate-100 py-5 px-3 space-y-2 rounded-lg">
                 <div className="flex justify-between">
                   <div className="flex gap-1">
                     <Image
@@ -680,7 +709,7 @@ const Page = () => {
               </div>
             </div>
             <div className="">
-              <div className="bg-gray-50 py-5 px-3 space-y-2 rounded-lg">
+              <div className="bg-gray-50 hover:bg-slate-100 py-5 px-3 space-y-2 rounded-lg">
                 <div className="flex justify-between">
                   <div className="flex gap-1">
                     <Image
@@ -750,7 +779,7 @@ const Page = () => {
               </div>
             </div>
             <div className="">
-              <div className="bg-gray-50 py-5 px-3 space-y-2 rounded-lg">
+              <div className="bg-gray-50 hover:bg-slate-100 py-5 px-3 space-y-2 rounded-lg">
                 <div className="flex justify-between">
                   <div className="flex gap-1">
                     <Image
@@ -798,7 +827,7 @@ const Page = () => {
                   8th.A warm welcome and express makeup offered to test the
                   products and I was won over by the HD fluid foundation.A visit
                   to the store and you will...
-                </p>  
+                </p>
               </div>
 
               <div className="flex md:mt-4 lg:mt-4 2xl:mt-6">
@@ -820,7 +849,7 @@ const Page = () => {
               </div>
             </div>
             <div className="">
-              <div className="bg-gray-50 py-5 px-3 space-y-2 rounded-lg">
+              <div className="bg-gray-50 hover:bg-slate-100 py-5 px-3 space-y-2 rounded-lg">
                 <div className="flex justify-between">
                   <div className="flex gap-1">
                     <Image
@@ -890,7 +919,7 @@ const Page = () => {
               </div>
             </div>
             <div className="">
-              <div className="bg-gray-50 py-5 px-3 space-y-2 rounded-lg">
+              <div className="bg-gray-50 hover:bg-slate-100 py-5 px-3 space-y-2 rounded-lg">
                 <div className="flex justify-between">
                   <div className="flex gap-1">
                     <Image
@@ -971,31 +1000,31 @@ const Page = () => {
             FOLLOW US ON INSTAGRAM
           </div>
           <div className=" flex md:gap-2 lg:gap-3 xl:gap-4 mt-5 sm:mt-6 md:mt-6 lg:mt-8 xl:mt-7 2xl:mt-12">
-            <div id="image2">
+            <div data-aos="zoom-in" id="image2">
               <Image id="img1" className=" w-96 " src={r1} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
               </div>
             </div>
-            <div id="image2">
+            <div data-aos="zoom-in" id="image2">
               <Image id="img1" className=" w-96 " src={r2} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
               </div>
             </div>
-            <div id="image2">
+            <div data-aos="zoom-in" id="image2">
               <Image id="img1" className=" w-96 " src={r3} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
               </div>
             </div>
-            <div id="image2">
+            <div data-aos="zoom-in" id="image2">
               <Image id="img1" className=" w-96 " src={r4} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
               </div>
             </div>
-            <div id="image2">
+            <div data-aos="zoom-in" id="image2">
               <Image id="img1" className=" w-96 " src={r5} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
@@ -1004,7 +1033,7 @@ const Page = () => {
           </div>
           {/* ----------section 9---------- */}
           <div className="flex sm:flex-row flex-col  sm:items-center justify-between px-5 sm:px-5 md:px-12 lg:px-16 xl:px-24 2xl:px-28 mt-10 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16 2xl:mt-20">
-            <div>
+            <div data-aos="fade-right">
               <div className="fontf text-[22px]  sm:text-[20px]  md:text-[25px] lg:text-[28px] xl:text-[32px] 2xl:text-[46px] sm:pb-3  md:pb-3 lg:pb-4 2xl:pb-7 ">
                 SUBSCRIBE TO OUR NEWS LETTER
               </div>
@@ -1013,7 +1042,10 @@ const Page = () => {
                 latest updates, discounts and special offers.
               </div>
             </div>
-            <div className="mt-4 sm:mt-0  relative w-[30%]">
+            <div
+              data-aos="fade-left"
+              className="mt-4 sm:mt-0  relative w-[30%]"
+            >
               <input
                 className="border w-full border-[#BABABA] bg-[#F5F5F5]  xl:px-2 2xl:px-2 lg:py-2 xl:py-2 2xl:py-4 text-black placeholder-black"
                 type="email"
@@ -1050,7 +1082,10 @@ const Page = () => {
                     processes. Very high quality pigments.
                   </p>
 
-                  <div className="flex gap-4 sm:gap-4 md:gap-4 lg:gap-5 xl:gap-4 2xl:gap-6 pt-3 sm:pt-3 md:pt-4 lg:pt-6 xl:pt-6 2xl:pt-9">
+                  <div
+                    data-aos="fade-right"
+                    className="flex gap-4 sm:gap-4 md:gap-4 lg:gap-5 xl:gap-4 2xl:gap-6 pt-3 sm:pt-3 md:pt-4 lg:pt-6 xl:pt-6 2xl:pt-9"
+                  >
                     <Link id="roundd" href="https://www.twitter.com">
                       <Image
                         className="w-5 sm:w-5 md:w-6 lg:w-4 xl:w-4  2xl:w-8"
