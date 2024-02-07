@@ -52,6 +52,9 @@
   #voilets{
     background-image: url(../../public/voilets.png);
   }
+  .vv{
+    background-image: url(../../public/voilets.png);
+  }
 
   @media (min-width:320px) and (max-width:480px){
     #main-img{
