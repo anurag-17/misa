@@ -22,7 +22,7 @@ const Header = () => {
 
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    password: '',
   });
   
 
@@ -30,10 +30,11 @@ const Header = () => {
     e.preventDefault();
     // Store the data in local storage
     localStorage.setItem('userData', JSON.stringify(formData));
+    setDialogMatch(false);
     // Optionally, you can clear the form fields after submission
     setFormData({
       name: '',
-      email: '',
+      password: '',
     });}
 
     const handleChange = (e) => {
@@ -42,6 +43,7 @@ const Header = () => {
         ...prevData,
         [name]: value,
       }));
+
     };
   const openNav = () => {
     setSidenavWidth(147);
@@ -164,6 +166,16 @@ const Header = () => {
                   SERVICES
                 </Link>
               </li>
+              <li>
+                <Link href="/termcondition" className="hover:underline">
+                  Terms & Conditions
+                </Link>
+              </li>
+              <li>
+                <Link href="/refund" className="hover:underline">
+                 Refund Policy
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -215,7 +227,7 @@ const Header = () => {
                       <input
                       className="border border-gray-400 mb-4 py-2 rounded px-3"
                         type="text"
-                        id="name"
+                        id="email"
                         name="name"
                         placeholder="Email"
                         value={formData.name}
@@ -226,17 +238,17 @@ const Header = () => {
                  
                       <input
                       className="border border-gray-400 py-2 rounded px-3"
-                        type="email"
-                        id="email"
-                        name="email"
+                        type="password"
+                        id="password"
+                        name="password"
                         placeholder="Password"
-                        value={formData.email}
+                        value={formData.password}
                         onChange={handleChange}
                         required
                       />
                       <br/>
                       <div className="flex justify-center">
-                      <button className="text-[20px] font-bold px-5 py-3 bg-blue-300  hover:bg-blue-400 rounded-md mt-3" type="submit">Submit</button>
+                      <button  className="text-[20px] font-bold px-5 py-3 bg-blue-300  hover:bg-blue-400 rounded-md mt-3" type="submit">Submit</button>
                       </div>
                     </form>
                   </div>
