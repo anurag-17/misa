@@ -11,10 +11,12 @@ import basket from "../../../../public/Vector (2).svg";
 import closebuton from "../../../../public/close.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useCart } from "@/app/createcontext/CartContext";
+
 
 
 const Header = () => {
-
+  const { cart } = useCart();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [sidenavWidth, setSidenavWidth] = useState(0);
@@ -81,7 +83,7 @@ const Header = () => {
           data-aos-easing="linear"
           data-aos-duration="1500"
           className="z-50 fixed  
-                w-full top-0 left-0 bg-white"
+                w-full top-0 left-0 bg-white shadow-xl"
         >
           <div className=" py-[10px] flex items-center justify-center mx-5 sm:mx-5 md:mx-12 lg:mx-24 2xl:my-5 xl:my-2 lg:my-1 relative">
             {/* -----navbar-------- */}
@@ -116,12 +118,26 @@ const Header = () => {
                       BESTSELLERS
                     </Link>
                   </li>
-
+                  <li>
+                <Link href="/giftsection" className="hover:underline">
+                GIFT SECTION
+                </Link>
+              </li>
                   <li>
                     <Link href="/recycle" className="hover:underline">
                       SERVICES
                     </Link>
                   </li>
+                  <li>
+                <Link href="/termcondition" className="hover:underline">
+                  TERMS & CONDITION
+                </Link>
+              </li>
+              <li>
+                <Link href="/refund" className="hover:underline">
+                 REFUND POLICY
+                </Link>
+              </li>
                 </ul>
               </div>
             </div>
@@ -138,12 +154,19 @@ const Header = () => {
                   alt="image"
                 />
               </button>
-
+             <Link href='/cart'>
               <Image
                 className="cursor-pointer w-[15px] sm:w-[15px] md:w-[11px] lg:w-4 xl:w-4 2xl:w-6"
                 src={basket}
                 alt="image"
               />
+                 {cart.length > 0 && (
+              <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full px-2">
+                {cart.length}
+              </span>
+            )}
+              </Link>
+
             </div>
           </div>
 
@@ -160,7 +183,11 @@ const Header = () => {
                   BESTSELLERS
                 </Link>
               </li>
-
+              <li>
+                <Link href="/giftsection" className="hover:underline">
+                  GIFT SECTION
+                </Link>
+              </li>
               <li>
                 <Link href="/recycle" className="hover:underline">
                   SERVICES
@@ -168,12 +195,12 @@ const Header = () => {
               </li>
               <li>
                 <Link href="/termcondition" className="hover:underline">
-                  Terms & Conditions
+                  TERMS & CONDITION
                 </Link>
               </li>
               <li>
                 <Link href="/refund" className="hover:underline">
-                 Refund Policy
+                 REFUND POLICY
                 </Link>
               </li>
             </ul>

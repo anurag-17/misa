@@ -17,7 +17,7 @@ const BestSeller = () => {
   return (
     <>
     <Header/>
-        <div className='mt-36'>
+        <div className='2xl:mt-48 mt-32'>
        
         <div className="collections text-[22px] sm:text-[24px] md:text-xl lg:text-3xl xl:text-3xl  2xl:text-5xl mt-5 sm:mt-6 md:mt-6 lg:mt-14 xl:mt-4 2xl:mt-32 flex justify-center fontf ">
             Our BestSeller Products
@@ -166,10 +166,10 @@ const BestSeller = () => {
               </h1>
             </div>
           </div> 
-
+<hr className='2xl:mt-32 mt-8  border-[1px]'/>
           {/* -------footer---------    */}
           
-            <div className='mt-20'>
+            <div className=''>
           <Footer/></div>
         </div>
     </>

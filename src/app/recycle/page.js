@@ -38,12 +38,12 @@ const Recycle = () => {
     <>
       <div>
         <Header/>
-    <section className='2xl:mt-36'>
-        <div className=' w-[50%] mx-auto'>
-            <div className='text-[40px] font-medium mb-10'>
+    <section className='2xl:mt-48 mt-36'>
+        <div className=' w-[75%] mx-auto'>
+            <div className='2xl:text-[45px] text-[40px] font-medium mb-10'>
                 Recycle
             </div>
-            <p className='opacity-50'>
+            <p className='opacity-50 lg:text-[14px] 2xl:text-[20px]'>
             With the increase in pollution every day, the world should develop different ways of securing the  environment for future generations. Recycling can be considered as one of the ways to control pollution because recycling is the key to reducing the wastage of some useful materials. Recycling aims at environmental sustainability by substituting raw material inputs into and by redirecting waste outputs out of the ecosystem. This paragraph was meant for giving a recycling essay introduction to the readers. While reading this article, one will understand the importance of recycling essays in the process of gaining knowledge.
 
      <br/>    <br/>    
@@ -68,17 +68,17 @@ Most of the waste that is generated all around the globe comes from industries. 
             </p>
 
         </div>
-            <div className='border border-[20px] rounded-lg border-black mt-10 w-[50%] mx-auto'>
+            <div className=' border-[20px] rounded-lg border-black mt-10 w-[50%] mx-auto'>
            
             <div className='flex justify-center text-[35px]'>
               Recycle
             </div>
             <img src='/recycle.svg' alt='recycle'/>
             </div>
-            <div className='mt-6 w-[50%] mx-auto flex flex-col  items-center gap-y-4'>
-                <p className='text-[30px]'>Subscribe to our newsletter</p>
-                <p className='opacity-70 text-[18px]'>
-                    For more details please register with mail address 
+            <div className='mt-14 w-[50%] mx-auto flex flex-col  items-center gap-y-4'>
+                <p className='text-[30px] 2xl:text-[40px]'>Subscribe to our newsletter</p>
+                <p className='opacity-70 text-[14px] 2xl:text-[18px]'>
+                Sign up today for free and be the first to know about our new updates, discounts and special offers.
                 </p>
                 <input className='text rounded-2xl p-3 border w-[50%]' type='email' placeholder='Email'></input>
             </div>
@@ -129,11 +129,7 @@ Most of the waste that is generated all around the globe comes from industries. 
                   </p>
                 </div>
               </div>
-              <div>
-                <button className="bg-[#F2F2F3] hover:bg-slate-200 px-3 sm:px-3 md:px-3 lg:px-4 xl:px-4 2xl:px-8 py-2 sm:py-2 md:py-1 lg:py-2 xl:py-3 2xl:py-3 text-[10px] sm:text-[10px] md:text-[11px] lg:text-[13px] xl:text-[13px] 2xl:text-lg rounded-lg ">
-                  Leave a comment
-                </button>
-              </div>
+            
             </div>
           </div>
         
@@ -616,6 +612,8 @@ Most of the waste that is generated all around the globe comes from industries. 
               </div>
             </div>
           </div>
+
+          <hr className='mt-16'/>
 
           {/* -----------section 6----------- */}
           <div className="px-5 sm:px-5 md:px-12 lg:px-16 xl:px-24 2xl:px-28 mt-10 sm:mt-10 md:mt-14 lg:mt-16 xl:mt-24">
