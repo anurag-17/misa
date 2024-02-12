@@ -1,17 +1,39 @@
 'use client';
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
+  // Load cart from local storage on component mount
+  useEffect(() => {
+    const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
+    setCart(storedCart);
+  }, []);  // Empty dependency array ensures this effect runs only once on mount
+
+  const saveCartToLocalStorage = (newCart) => {
+    localStorage.setItem('cart', JSON.stringify(newCart));
+  };
+
   const addToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
+    setCart((prevCart) => {
+      const newCart = [...prevCart, product];
+      saveCartToLocalStorage(newCart);
+      return newCart;
+    });
+  };
+
+  const removeFromCart = (productId) => {
+    setCart((prevCart) => {
+      const newCart = prevCart.filter((product) => product.id !== productId);
+      saveCartToLocalStorage(newCart);
+      return newCart;
+    });
   };
 
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );

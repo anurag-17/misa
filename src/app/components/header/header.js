@@ -12,6 +12,7 @@ import closebuton from "../../../../public/close.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useCart } from "@/app/createcontext/CartContext";
+import wishlist from '../../../../public/wishlist.svg';
 
 
 
@@ -146,7 +147,7 @@ const Header = () => {
               alt="image"
               className="absolute 2xl:w-52 xl:w-36 lg:w-32 md:w-24 sm:w-28 w-28"
             />
-            <div className="flex 2xl:gap-9 xl:gap-6 lg:gap-6  md:gap-5 sm:gap-4 gap-3 ml-auto ">
+            <div className="flex 2xl:gap-9 xl:gap-6 lg:gap-6  md:gap-5 sm:gap-4 gap-3 ml-auto items-center">
               <button onClick={() => setDialogMatch(true)}>
                 <Image
                   className="cursor-pointer w-[15px] sm:w-[15px] md:w-[11px] lg:w-4 xl:w-4 2xl:w-6"
@@ -154,14 +155,18 @@ const Header = () => {
                   alt="image"
                 />
               </button>
+              <Link href="#">
+                <Image className="cursor-pointer w-[15px] sm:w-[15px] md:w-[11px] lg:w-4 xl:w-4 2xl:w-8" 
+                 src={wishlist} alt="wishlist" />
+              </Link>
              <Link href='/cart'>
               <Image
-                className="cursor-pointer w-[15px] sm:w-[15px] md:w-[11px] lg:w-4 xl:w-4 2xl:w-6"
+                className="cursor-pointer w-[15px] sm:w-[15px] md:w-[11px] lg:w-4 xl:w-4 2xl:w-6 "
                 src={basket}
                 alt="image"
               />
                  {cart.length > 0 && (
-              <span className="absolute top-0 right-0 bg-red-500 text-white rounded-full px-2">
+              <span className="absolute top-0 right-1 bg-red-500 text-white rounded-full px-2 text-[11px] 2xl:text-[16px]">
                 {cart.length}
               </span>
             )}

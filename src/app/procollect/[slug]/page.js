@@ -10,12 +10,12 @@ import Footer from "@/app/components/footer/footer";
 console.log(produc);
 
 const Procollection = ({ params }) => {
-  const { addToCart , cart} = useCart();
+  const { addToCart, cart } = useCart();
   const [count, setCount] = useState(0);
   const router = useRouter();
   const prodId = params?.slug || "";
 
-  console.log(cart)
+  console.log(cart);
   const filterProduct = produc.filter((pro) => pro?.id == prodId);
 
   const handleIncrement = () => {
@@ -61,15 +61,6 @@ const Procollection = ({ params }) => {
                     <div className="flex gap-x-4">
                       <div className="flex gap-2">
                         <button
-                          className="p-2 2xl:p-3 px-4 2xl:px-5 rounded-lg bg-neutral-500 text-white text-lg hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
-                          onClick={handleIncrement}
-                        >
-                          +
-                        </button>
-                        <p className="text-[20px] 2xl:text-[27px] flex items-center">
-                          {count}
-                        </p>
-                        <button
                           className={`p-2 2xl:p-3 px-[17px] 2xl:px-5 rounded-lg bg-neutral-500 text-white text-xl ${
                             count === 0
                               ? "cursor-not-allowed opacity-50"
@@ -80,18 +71,29 @@ const Procollection = ({ params }) => {
                         >
                           -
                         </button>
+
+                        <p className="text-[20px] 2xl:text-[27px] flex items-center">
+                          {count}
+                        </p>
+                        <button
+                          className="p-2 2xl:p-3 px-4 2xl:px-5 rounded-lg bg-neutral-500 text-white text-lg hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+                          onClick={handleIncrement}
+                        >
+                          +
+                        </button>
                       </div>
                       <div>
-                        <button className="bg-black text-white py-2 px-4 2xl:py-3 2xl:px-8 rounded text-[16px] 2xl:text-[18px] transition-transform transform hover:scale-105 duration-300 ease-in-out border border-black hover:bg-transparent hover:text-black hover:border hover:border-black"
-                        onClick={() => {
-              addToCart(filterProduct[0]);
-              alert('Product added to cart!'); 
-            }}>
+                        <button
+                          className="bg-black text-white py-2 px-4 2xl:py-3 2xl:px-8 rounded text-[16px] 2xl:text-[18px] transition-transform transform hover:scale-105 duration-300 ease-in-out border border-black hover:bg-transparent hover:text-black hover:border hover:border-black"
+                          onClick={() => {
+                            addToCart(filterProduct[0]);
+                            alert("Product added to cart!");
+                          }}
+                        >
                           Add to Cart
                         </button>
                       </div>
                     </div>
-                 
                     <p className="text-[22px] 2xl:text-[35px]">
                       Services : Cash on delivery available
                     </p>
