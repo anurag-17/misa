@@ -90,6 +90,11 @@ const Footer = () => {
                         Bestsellers
                       </Link>
                     </li>
+                    <li className="">
+                      <Link href="/giftsection" className="hover:underline">
+                        Gift Section
+                      </Link>
+                    </li>
                     
                     <li className="">
                       <Link href="/recycle" className="hover:underline">
@@ -135,7 +140,7 @@ const Footer = () => {
 
               <div className="py-2 lg:py-3 xl:py-3 2xl:py-6 ">
                 <div className="text-[10px] sm:text-[10px] md:text-[10px] lg:text-[9px] xl:text-[11px] 2xl:text-base font-light  text-[#7D7D7D] flex justify-center text-center ">
-                  © 2023 MisaParis. All Rights Reserved.
+                  © 2024 MisaParis. All Rights Reserved.
                 </div>
               </div>
             </footer>

@@ -12,12 +12,13 @@ import closebuton from "../../../../public/close.svg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useCart } from "@/app/createcontext/CartContext";
-import wishlist from '../../../../public/wishlist.svg';
+import wishlistt from '../../../../public/wishlist.svg';
+import { useRouter } from 'next/navigation';
 
 
 
 const Header = () => {
-  const { cart } = useCart();
+  const { cart,wishlist } = useCart();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [sidenavWidth, setSidenavWidth] = useState(0);
@@ -28,6 +29,10 @@ const Header = () => {
     password: '',
   });
   
+  const router = useRouter();
+  const handleHome = () => {
+    router.push("/");
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -142,10 +147,12 @@ const Header = () => {
                 </ul>
               </div>
             </div>
+            
             <Image
               src={misa}
               alt="image"
-              className="absolute 2xl:w-52 xl:w-36 lg:w-32 md:w-24 sm:w-28 w-28"
+              onClick={handleHome}
+              className="absolute 2xl:w-52 xl:w-36 lg:w-32 md:w-24 sm:w-28 w-28 cursor-pointer"
             />
             <div className="flex 2xl:gap-9 xl:gap-6 lg:gap-6  md:gap-5 sm:gap-4 gap-3 ml-auto items-center">
               <button onClick={() => setDialogMatch(true)}>
@@ -155,9 +162,14 @@ const Header = () => {
                   alt="image"
                 />
               </button>
-              <Link href="#">
+              <Link href="/wish-list">
                 <Image className="cursor-pointer w-[15px] sm:w-[15px] md:w-[11px] lg:w-4 xl:w-4 2xl:w-8" 
-                 src={wishlist} alt="wishlist" />
+                 src={wishlistt} alt="wishlist" />
+                 {wishlist.length > 0 && (
+                  <span className="absolute top-0 right-14 bg-red-500 text-white rounded-full px-2 text-[11px] 2xl:text-[16px]">
+                    {wishlist.length}
+                  </span>
+                 )}
               </Link>
              <Link href='/cart'>
               <Image
@@ -166,7 +178,7 @@ const Header = () => {
                 alt="image"
               />
                  {cart.length > 0 && (
-              <span className="absolute top-0 right-1 bg-red-500 text-white rounded-full px-2 text-[11px] 2xl:text-[16px]">
+              <span className="absolute top-0 right-[-12px]  bg-red-500 text-white rounded-full px-2 text-[11px] 2xl:text-[16px]">
                 {cart.length}
               </span>
             )}
@@ -249,15 +261,15 @@ const Header = () => {
                   </div>
                   <Dialog.Title
                     as="h3"
-                    className="text-[35px] font-semibold  text-gray-900 flex justify-center"
+                    className="text-[40px] font-semibold  text-gray-900 flex justify-center"
                   >
                    Login
                   </Dialog.Title>
-                  <div className="mt-2 flex justify-center">
+                  <div className="mt-2 flex justify-center w-full">
                     <form onSubmit={handleSubmit}>
                      
                       <input
-                      className="border border-gray-400 mb-4 py-2 rounded px-3"
+                      className="border border-gray-400 mb-4 py-2 rounded px-3 pr-24"
                         type="text"
                         id="email"
                         name="name"
@@ -269,7 +281,7 @@ const Header = () => {
                      <br/>
                  
                       <input
-                      className="border border-gray-400 py-2 rounded px-3"
+                      className="border border-gray-400 py-2 rounded px-3 pr-24"
                         type="password"
                         id="password"
                         name="password"

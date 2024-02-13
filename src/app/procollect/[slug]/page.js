@@ -7,6 +7,7 @@ import { useCart } from "@/app/createcontext/CartContext";
 
 import { produc } from "@/app/page";
 import Footer from "@/app/components/footer/footer";
+import { ToastContainer, toast } from "react-toastify";
 console.log(produc);
 
 const Procollection = ({ params }) => {
@@ -27,6 +28,7 @@ const Procollection = ({ params }) => {
 
   return (
     <>
+    <ToastContainer/>
       <div>
         <Header />
         <section className="mt-36 2xl:mt-40 mx-32">
@@ -47,15 +49,15 @@ const Procollection = ({ params }) => {
                   <div className="space-y-5 w-[50%]">
                     {/* <p className="text-[22px]">Name: <span className="text-[30px]">{product.id}</span></p> */}
                     <p className="text-[22px] 2xl:text-[35px]">
-                      Title:{" "}
+                      Title:
                       <span className="text-[22px] 2xl:text-[35px]">
                         {product.title}
                       </span>
                     </p>
                     <p className="text-[22px] 2xl:text-[35px]">
-                      Price:{" "}
+                      Price : 
                       <span className="text-[22px] 2xl:text-[35px]">
-                        {product.price}
+                        $ {product.price}
                       </span>
                     </p>
                     <div className="flex gap-x-4">
@@ -87,7 +89,7 @@ const Procollection = ({ params }) => {
                           className="bg-black text-white py-2 px-4 2xl:py-3 2xl:px-8 rounded text-[16px] 2xl:text-[18px] transition-transform transform hover:scale-105 duration-300 ease-in-out border border-black hover:bg-transparent hover:text-black hover:border hover:border-black"
                           onClick={() => {
                             addToCart(filterProduct[0]);
-                            alert("Product added to cart!");
+                            toast.success("Product added sucessfully")
                           }}
                         >
                           Add to Cart

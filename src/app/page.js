@@ -51,14 +51,16 @@ import "aos/dist/aos.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "./components/header/header";
-import wishlist from '../../public/wishlist.svg';
+import emptyHeartIcon from "../../public/wishlist.svg";
+import filledHeartIcon from "../../public/heart.svg";
+import { useCart } from "./createcontext/CartContext";
 
 export const products = [
   {
     id: "Voilet",
     imageSrc: p7,
     title: "SMOOTHING SMOOTHING BASE",
-    price: "$ 10.00",
+    price: 10.00,
     discription:
       "Mascara is makeup that makes your eyelashes look longer and thicker. If you wear mascara while watching a really sad movie, you may end up with black smudges under your eyes. Some people wear mascara every day, to darken their lashes or accent their eyes.",
   },
@@ -66,7 +68,7 @@ export const products = [
     id: "Liner-black",
     imageSrc: p8,
     title: "EYE LINER LIKER BLACK",
-    price: "$ 22.00",
+    price: 22.00,
     discription:
       "Eye liner or eyeliner is a cosmetic used to define the eyes. It is applied around the contours of the eye(s). It is often used to create various aesthetic effects.",
   },
@@ -74,7 +76,7 @@ export const products = [
     id: "Lipstick-misaparis",
     imageSrc: p9,
     title: "LIPLIKER LIPSTICK MISAPARIS",
-    price: "$ 30.00",
+    price: 30.00,
     discription:
       "Reveal your natural beauty with Penny Lipstick. With its rich oils and natural waxes, it imparts a silky, delicate and ultra-hydrating texture. Its formula containing vitamin E provides softness and protection. Its radiant, vibrant and long-lasting color lets pure pigments shine through to enhance every smile. A feeling of well-being with each application!",
   },
@@ -84,61 +86,75 @@ export const produc = [
     id: "corectrs",
     title: "Correctors",
     imageSrc: p1,
-    wish:wishlist,
+    // wish:wishlist,
     discription:
       "Découvrez le Fond de Teint Fluide HD de MisaParis, une véritable révolution dans l'art du maquillage. Conçu pour transcender la beauté naturelle, ce fond de teint offre une couvrance modulable, de la légèreté aérienne à l'intensité désirée, pour un teint parfait sans démarcation.Its unique formula smoothes, protects and illuminates your skin, while discreetly reshaping your features in seconds. The MisaParis illuminating strobe base captures light and diffuses it onto your face, creating a natural halo effect. It blurs imperfections, wrinkles and fine lines, for an unified and radiant complexion. Enriched with moisturizing agents, this primer nourishes and protects your skin throughout the day. It is suitable for all skin types, even the most sensitive. With the MisaParis illuminating and correcting primer, you can say goodbye to dull and tired complexion. Find luminous, hydrated and radiant skin, for a natural and sophisticated look. ",
-    price: "$ 89.00",
+    price: 89.00,
   },
   {
     id: "perl",
     title: "Perly Eyes Collection",
     imageSrc: p2,
-    wish:wishlist,
+    // wish:wishlist,
     discription:
       "Discover timeless elegance with MisaParis Pearly Eyeshadows – the very essence of glamour. A highlighter with a finely milled texture that illuminates the complexion and eyes. This highlighter harnesses the power of mother-of-pearl to capture and reflect light, creating an amber glow on the skin. Full of emollient ingredients, its light texture melts into the skin. Full of emollient ingredients, its light texture melts into the skin. Use as a highlighter or blush on the face. 1) Place a touch of Highlighter on the cheek, below the middle of the eye, then 2) spread it with your finger or a fan brush going down towards the nostril and then 3) going up towards the temples.  ",
-    price: "$ 45.00",
+    price: 45.00,
   },
   {
     id: "blushss",
     title: "Blush Blush",
     imageSrc: p3,
-    wish:wishlist,
+    // wish:wishlist,
     discription:
       "The Luxury Coverage Matte Trio Correctors is a concealer that will provide a touch of sophistication and total coverage of skin imperfections and enhance beauty by masking the imperfections of your complexion and enhancing it.Reveal your natural glow with our cutting-edge Highlighter! Its finely milled texture and formula enriched with mother-of-pearl capture the light to enhance your complexion with an unrivaled amber glow. Perfect for brightening the eyes and enhancing the cheekbones, this dual-function illuminator adapts to your needs: use it for instant radiance or as a blush for a delicate touch of color. Its composition rich in emollient ingredients fuses with the skin for a luminous and natural finish. Dare to shine, choose our Highlighter for radiant beauty! Its pigment-rich formula offers intense coverage and long-lasting hold, while its regenerating oil nourishes and protects your lips.With Aurore lipstick, say goodbye to dry and irritated lips.",
-    price: "$ 23.00",
+    price: 23.00,
   },
   {
     id: "satin",
     title: "Satin Lipsticks",
     imageSrc: p4,
-    wish:wishlist,
+    // wish:wishlist,
     discription:
       "Discover Aurore Satin Lipstick, a perfect fusion of vibrant colors and exceptional comfort. Its pigment-rich formula offers intense coverage and long-lasting hold, while its regenerating oil nourishes and protects your lips.With Aurore lipstick, say goodbye to dry and irritated lips. Its soft, creamy texture glides easily onto your lips, leaving them soft and hydrated throughout the day.Create a glamorous and sophisticated look with a diverse color palette, from natural to bold shades. Aurore is the ideal choice for all occasions, whether for a special evening or a casual day.Treat yourself to the luxury of a lipstick that combines performance and comfort. ",
-    price: "$ 65.00",
+    price: 65.00,
   },
   {
     id: "foundation",
     title: "Foundations",
     imageSrc: p5,
-    wish:wishlist,
+    // wish:wishlist,
     discription:
       "Découvrez le Fond de Teint Fluide HD de MisaParis, une véritable révolution dans l'art du maquillage. Conçu pour transcender la beauté naturelle, ce fond de teint offre une couvrance modulable, de la légèreté aérienne à l'intensité désirée, pour un teint parfait sans démarcation.Its unique formula smoothes, protects and illuminates your skin, while discreetly reshaping your features in seconds. The MisaParis illuminating strobe base captures light and diffuses it onto your face, creating a natural halo effect. It blurs imperfections, wrinkles and fine lines, for an unified and radiant complexion. Enriched with moisturizing agents, this primer nourishes and protects your skin throughout the day. It is suitable for all skin types, even the most sensitive. With the MisaParis illuminating and correcting primer, you can say goodbye to dull and tired complexion. Find luminous, hydrated and radiant skin, for a natural and sophisticated look.",
-    price: "$ 30.00",
+    price: 30.00,
   },
   {
     id: "eye",
     title: "Eyes",
     imageSrc: p6,
-    wish:wishlist,
+    // wish:wishlist,
     discription:
       "Enhance your eyes with the nobility of the Palette Parisienne Matte Eyeshadow from MisaParis. Handcrafted, our palette is the perfect combination of elegance and performance, offering an impeccable matte finish. The easy application, similar to a caress of powder, is accompanied by opulent pigments, for a natural effect with warm reflections.Designed for demanding beauty enthusiasts and glamor professionals, our eyeshadows are the result of French artisanal know-how, guaranteeing unparalleled quality and a luxurious experience with each application. Select from five captivating colors, from vibrant hues to subtle nuances, for a result as unique as your style. Each shade is reusable, allowing you to create varied and personalized looks that captivate and fascinate. Our pearly eyeshadows are composed of pure pigments, offering uncompromising color intensity and long-wearing effect for an effect that lasts all day. The satiny, velvety texture",
-    price: "$ 36.00",
+    price: 36.00,
   },
 ];
 const Page = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [sidenavWidth, setSidenavWidth] = useState(0);
+  const { addToWishlist, removeFromWishlist, wishlist } = useCart();
+  console.log(wishlist, "fsdff");
+
+  // const [wishlist, setWishlist] = useState([]);
+
+  // const toggleWishlist = (productId) => {
+  //   if (wishlist.includes(productId)) {
+  //     // Remove from wishlist
+  //     setWishlist(wishlist.filter((id) => id !== productId));
+  //   } else {
+  //     // Add to wishlist
+  //     setWishlist([...wishlist, productId]);
+  //   }
+  // };
 
   const openNav = () => {
     setSidenavWidth(147);
@@ -194,7 +210,6 @@ const Page = () => {
               <div className="lg:mb-36 xl:mb-56  2xl:mb-60 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-4xl 2xl:text-6xl pb-4 sm:pb-4 md:pb-6 lg:pb-10 xl:pb-10 2xl:pb-32  lips fontf">
                 MOVING LIPS
               </div>
-            
             </div>
           </div>
           {/* ----------section 2---------- */}
@@ -210,8 +225,25 @@ const Page = () => {
             >
               {produc.map((product) => (
                 <div key={product.id} className="">
-                    <Link href="#">
-                <Image className="absolute" src={product?.wish} alt="wishlist"/> </Link>
+                  <Image
+                    onClick={() => {
+                      const isProductInWishlist = wishlist.some(
+                        (item) => item.id === product.id
+                      );
+
+                      isProductInWishlist
+                        ? removeFromWishlist(product.id)
+                        : addToWishlist(product);
+                    }}
+                    className="absolute w-[40px] m-3 cursor-pointer"
+                    src={
+                      wishlist.some((item) => item.id === product.id)
+                        ? filledHeartIcon
+                        : emptyHeartIcon
+                    }
+                    alt="wishlist"
+                  />
+
                   <Link
                     href={`/procollect/[slug]`}
                     as={`/procollect/${product.id}`}
@@ -235,7 +267,6 @@ const Page = () => {
             </div>
           </div>
 
-      
           {/* --------section 3------ */}
           <div
             className="px-28 mt-10 md:mt-14 lg:mt-20 xl:mt-10 2xl:mt-44"
@@ -276,6 +307,24 @@ const Page = () => {
           >
             {products.map((product) => (
               <div key={product.id} className="">
+              <Image
+                    onClick={() => {
+                      const isProductInWishlist = wishlist.some(
+                        (item) => item.id === product.id
+                      );
+
+                      isProductInWishlist
+                        ? removeFromWishlist(product.id)
+                        : addToWishlist(product);
+                    }}
+                    className="absolute w-[40px] m-3 cursor-pointer"
+                    src={
+                      wishlist.some((item) => item.id === product.id)
+                        ? filledHeartIcon
+                        : emptyHeartIcon
+                    }
+                    alt="wishlist"
+                  />
                 <Link href="/products/[slug]" as={`/products/${product.id}`}>
                   <div
                     className="vv w-full xl:h-[80%] 2xl:h-full"
@@ -832,36 +881,46 @@ const Page = () => {
             FOLLOW US ON INSTAGRAM
           </div>
           <div className=" flex md:gap-2 lg:gap-3 xl:gap-4 mt-5 sm:mt-6 md:mt-6 lg:mt-8 xl:mt-7 2xl:mt-12">
-            <div data-aos="zoom-in" id="image2">
+          <Link href='https://www.instagram.com'>
+            <div data-aos="zoom-in" id="image2"> 
               <Image id="img1" className=" w-[393px] " src={r1} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
               </div>
             </div>
+            </Link>
+            <Link href='https://www.instagram.com'>
             <div data-aos="zoom-in" id="image2">
               <Image id="img1" className=" w-[393px] " src={r2} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
               </div>
             </div>
+            </Link>
+            <Link href='https://www.instagram.com'>
             <div data-aos="zoom-in" id="image2">
               <Image id="img1" className=" w-[393px] " src={r3} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
               </div>
             </div>
+            </Link>
+            <Link href='https://www.instagram.com'>
             <div data-aos="zoom-in" id="image2">
               <Image id="img1" className=" w-[393px] " src={r4} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
               </div>
             </div>
+            </Link>
+            <Link href='https://www.instagram.com'>
             <div data-aos="zoom-in" id="image2">
               <Image id="img1" className=" w-[393px] " src={r5} alt="image" />
               <div className="img3">
                 <Image id="img4" src={instagram} alt="image" />
               </div>
             </div>
+            </Link>
           </div>
           {/* ----------section 9---------- */}
           <div className="flex sm:flex-row flex-col  sm:items-center justify-between px-5 sm:px-5 md:px-12 lg:px-16 xl:px-24 2xl:px-28 mt-10 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16 2xl:mt-20">
@@ -966,12 +1025,17 @@ const Page = () => {
                   <ul className="text-[12px] sm:text-[12px] md:text-[12px] mt-3 md:mt-3 lg:mt-5 xl:mt-6 2xl:mt-6 lg:text-[9px] xl:text-[10px] 2xl:text-sm md:space-y-1 lg:space-y-2 xl:space-y-2 2xl:space-y-3 ">
                     <li className="">
                       <Link href="/" className="hover:underline">
-                        Home And News
+                        Home
                       </Link>
                     </li>
                     <li className="">
                       <Link href="/bestSeller" className="hover:underline">
                         Bestsellers
+                      </Link>
+                    </li>
+                    <li className="">
+                      <Link href="/giftsection" className="hover:underline">
+                        Gift Section
                       </Link>
                     </li>
 
@@ -989,12 +1053,12 @@ const Page = () => {
                   </h2>
                   <ul className="mt-3 sm:mt-3 text-[12px] sm:text-[12px] md:text-[12px] md:mt-3 lg:mt-5 xl:mt-6 2xl:mt-6 lg:text-[9px] xl:text-[10px] 2xl:text-sm  md:space-y-1 lg:space-y-2 xl:space-y-2 2xl:space-y-3 ">
                     <li className="">
-                      <Link href="#" className="hover:underline">
+                      <Link href="/refund" className="hover:underline">
                         Delivery & Return
                       </Link>
                     </li>
                     <li className="">
-                      <Link href="#" className="hover:underline">
+                      <Link href="/termcondition" className="hover:underline">
                         Terms & Conditions
                       </Link>
                     </li>
@@ -1019,7 +1083,7 @@ const Page = () => {
 
               <div className="py-2 lg:py-3 xl:py-3 2xl:py-6 ">
                 <div className="text-[10px] sm:text-[10px] md:text-[10px] lg:text-[9px] xl:text-[11px] 2xl:text-base font-light  text-[#7D7D7D] flex justify-center text-center ">
-                  © 2023 MisaParis. All Rights Reserved.
+                  © 2024 MisaParis. All Rights Reserved.
                 </div>
               </div>
             </footer>

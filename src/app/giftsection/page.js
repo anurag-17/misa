@@ -1,3 +1,4 @@
+'use client';
 import React from "react";
 import Header from "../components/header/header";
 import Image from "next/image";
@@ -20,6 +21,9 @@ import kkk from "../../../public/kalpha.svg";
 import iii from "../../../public/ialpha.svg";
 import sss from "../../../public/salpha.svg";
 import Footer from "../components/footer/footer";
+import emptyHeartIcon from "../../../public/wishlist.svg";
+import filledHeartIcon from "../../../public/heart.svg";
+import { useCart } from "../createcontext/CartContext";
 
 export const produc = [
   {
@@ -73,6 +77,7 @@ export const produc = [
 ];
 
 const GiftSection = () => {
+  const {wishlist,addToWishlist,removeFromWishlist}=useCart();
   return (
     <>
       <section>
@@ -124,6 +129,24 @@ const GiftSection = () => {
             >
               {produc.map((product) => (
                 <div key={product.id} className="">
+                <Image
+                    onClick={() => {
+                      const isProductInWishlist = wishlist.some(
+                        (item) => item.id === product.id
+                      );
+
+                      isProductInWishlist
+                        ? removeFromWishlist(product.id)
+                        : addToWishlist(product);
+                    }}
+                    className="absolute w-[40px] m-3 cursor-pointer"
+                    src={
+                      wishlist.some((item) => item.id === product.id)
+                        ? filledHeartIcon
+                        : emptyHeartIcon
+                    }
+                    alt="wishlist"
+                  />
                   <Link
                     href={`/procollect/[slug]`}
                     as={`/procollect/${product.id}`}
@@ -160,6 +183,24 @@ const GiftSection = () => {
                   .filter((prod) => prod.id == "satin")
                   .map((product) => (
                     <div key={product.id} className="">
+                    <Image
+                    onClick={() => {
+                      const isProductInWishlist = wishlist.some(
+                        (item) => item.id === product.id
+                      );
+
+                      isProductInWishlist
+                        ? removeFromWishlist(product.id)
+                        : addToWishlist(product);
+                    }}
+                    className="absolute w-[40px] m-3 cursor-pointer"
+                    src={
+                      wishlist.some((item) => item.id === product.id)
+                        ? filledHeartIcon
+                        : emptyHeartIcon
+                    }
+                    alt="wishlist"
+                  />
                       <Link
                         href={`/procollect/[slug]`}
                         as={`/procollect/${product.id}`}

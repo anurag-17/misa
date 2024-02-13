@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import React,{useState} from "react";
 import { useCart } from "@/app/createcontext/CartContext";
 import { products } from "@/app/page";
+import { ToastContainer, toast } from "react-toastify";
 console.log(products);
 
 const ProductDetails = ({ params }) => {
@@ -24,6 +25,7 @@ const ProductDetails = ({ params }) => {
 
   return (
     <>
+    <ToastContainer/>
       <div>
         <Header />
         <section className="mt-40 mx-32">
@@ -39,7 +41,7 @@ const ProductDetails = ({ params }) => {
                    
                     
                     <p className="text-[25px]">Title: <span className="text-[30px]">{product.title}</span></p>
-                    <p className="text-[25px]">Price: <span className="text-[30px]">{product.price}</span></p>
+                    <p className="text-[25px]">Price: <span className="text-[30px]">$ {product.price}</span></p>
                     <div className="flex gap-x-4">
                       <div className="flex gap-2">
                         <button
@@ -69,7 +71,7 @@ const ProductDetails = ({ params }) => {
                           className="bg-black text-white py-2 px-4 2xl:py-3 2xl:px-8 rounded text-[16px] 2xl:text-[18px] transition-transform transform hover:scale-105 duration-300 ease-in-out border border-black hover:bg-transparent hover:text-black hover:border hover:border-black"
                           onClick={() => {
                             addToCart(filterProduct[0]);
-                            alert("Product added to cart!");
+                          toast.success("Product added sucessfully")
                           }}
                         >
                           Add to Cart
