@@ -80,7 +80,7 @@
         margin-top: 30px !important;
      }
      .perleye{
-        padding-top: 10px;
+        padding-top: 20px;
      }
     
   }
@@ -224,7 +224,7 @@
 
 /* ---------side navbar------- */
 .sidenav {
-    height: 100%;
+    /* height: 100%; */
     width: 0;
     position: fixed;
     z-index: 1;

@@ -152,9 +152,9 @@ const Header = () => {
               src={misa}
               alt="image"
               onClick={handleHome}
-              className="absolute 2xl:w-52 xl:w-36 lg:w-32 md:w-24 sm:w-28 w-28 cursor-pointer"
+              className="absolute 2xl:w-52 xl:w-36 lg:w-32 md:w-24 sm:w-28 w-24 cursor-pointer"
             />
-            <div className="flex 2xl:gap-9 xl:gap-6 lg:gap-6  md:gap-5 sm:gap-4 gap-3 ml-auto items-center">
+            <div className="flex 2xl:gap-9 xl:gap-6 lg:gap-6  md:gap-5 sm:gap-4 gap-2 ml-auto items-center">
               <button onClick={() => setDialogMatch(true)}>
                 <Image
                   className="cursor-pointer w-[15px] sm:w-[15px] md:w-[11px] lg:w-4 xl:w-4 2xl:w-6"
@@ -163,10 +163,10 @@ const Header = () => {
                 />
               </button>
               <Link href="/wish-list">
-                <Image className="cursor-pointer w-[15px] sm:w-[15px] md:w-[11px] lg:w-4 xl:w-4 2xl:w-8" 
+                <Image className="cursor-pointer w-[19px] sm:w-[19px] md:w-[15px]  lg:w-6 xl:w-6  2xl:w-8" 
                  src={wishlistt} alt="wishlist" />
                  {wishlist.length > 0 && (
-                  <span className="absolute top-0 right-14 bg-red-500 text-white rounded-full px-2 text-[11px] 2xl:text-[16px]">
+                  <span className="absolute top-1 md:top-0 right-6 sm:right-7 2xl:right-14 bg-red-500 text-white rounded-full px-1 lg:px-[6px] xl:px-[6px] 2xl:px-2 text-[9px] lg:text-[11px] xl:text-[11px] 2xl:text-[16px]">
                     {wishlist.length}
                   </span>
                  )}
@@ -178,7 +178,7 @@ const Header = () => {
                 alt="image"
               />
                  {cart.length > 0 && (
-              <span className="absolute top-0 right-[-12px]  bg-red-500 text-white rounded-full px-2 text-[11px] 2xl:text-[16px]">
+              <span className="absolute top-1 md:top-0 right-[-3px] md:right-[-4px] lg:right-[-12px]  bg-red-500 text-white rounded-full px-1 lg:px-[6px] xl:px-[6px] 2xl:px-2 text-[9px] lg:text-[11px] 2xl:text-[16px]">
                 {cart.length}
               </span>
             )}
@@ -189,7 +189,7 @@ const Header = () => {
 
           <hr className=" opacity" />
           <div className="meanu md:block hidden ">
-            <ul className=" flex justify-center md:text-[10px] lg:text-[12px] xl:text-xs 2xl:text-base md:space-x-4 lg:space-x-6 xl:space-x-7 2xl:space-x-16 md:py-[11px] lg:py-[14px] xl:py-[14px] ">
+            <ul className=" flex justify-center md:text-[10px] lg:text-[12px] xl:text-[12px] 2xl:text-base md:space-x-4 lg:space-x-6 xl:space-x-7 2xl:space-x-16 md:py-[11px] lg:py-[14px] xl:py-[14px] ">
               <li>
                 <Link href="/" className="hover:underline">
                   HOME

@@ -35,15 +35,15 @@ import sss from "../../../public/salpha.svg";
 
 const Recycle = () => {
   return (
-    <>
+    <> 
       <div>
         <Header/>
-    <section className='2xl:mt-48 mt-36'>
-        <div className=' w-[75%] mx-auto'>
-            <div className='2xl:text-[45px] text-[40px] font-medium mb-10'>
+    <section className='mt-24 sm:mt-32 lg:mt-40'>
+        <div className=' mx-auto w-[90%] lg:w-[75%]'>
+            <div className='text-[25px] sm:text-[30px] lg:text-[35px] 2xl:text-[40px] flex justify-center'>
                 Recycle
             </div>
-            <p className='opacity-50 lg:text-[14px] 2xl:text-[20px]'>
+            <p className='opacity-50  text-[10px] sm:text-[14px] 2xl:text-[20px]'>
             With the increase in pollution every day, the world should develop different ways of securing the  environment for future generations. Recycling can be considered as one of the ways to control pollution because recycling is the key to reducing the wastage of some useful materials. Recycling aims at environmental sustainability by substituting raw material inputs into and by redirecting waste outputs out of the ecosystem. This paragraph was meant for giving a recycling essay introduction to the readers. While reading this article, one will understand the importance of recycling essays in the process of gaining knowledge.
 
      <br/>    <br/>    
@@ -68,19 +68,19 @@ Most of the waste that is generated all around the globe comes from industries. 
             </p>
 
         </div>
-            <div className=' border-[20px] rounded-lg border-black mt-10 w-[50%] mx-auto'>
+            <div className=' sm:border-[15px] md:border-[20px] border-[10px] rounded-lg border-black mt-10 w-[89%] sm:w-[50%] mx-auto'>
            
-            <div className='flex justify-center text-[35px]'>
+            <div className='flex justify-center  sm:text-[30px] lg:text-[35px] text-[20px]'>
               Recycle
             </div>
-            <img src='/recycle.svg' alt='recycle'/>
+            <img className='' src='/recycle.svg' alt='recycle'/>
             </div>
             <div className='mt-14 w-[50%] mx-auto flex flex-col  items-center gap-y-4'>
-                <p className='text-[30px] 2xl:text-[40px]'>Subscribe to our newsletter</p>
-                <p className='opacity-70 text-[14px] 2xl:text-[18px]'>
+                <p className='text-[20px] 2xl:text-[40px]'>Subscribe to our newsletter</p>
+                <p className='opacity-70 text-[12px] 2xl:text-[18px]'>
                 Sign up today for free and be the first to know about our new updates, discounts and special offers.
                 </p>
-                <input className='text rounded-2xl p-3 border w-[50%]' type='email' placeholder='Email'></input>
+                <input className='text rounded-2xl  p-1 sm:p-3 border w-full sm:w-[70%] md:w-[100%]' type='email' placeholder='Email'></input>
             </div>
                   {/* -----section 4---------- */}
                 <div className="mx-12 sm:mx-20 md:mx-28 lg:mx-40 xl:mx-48 2xl:mx-64 bg-gray-50 hover:bg-slate-100 py-4 sm:py-4 md:py-7 rounded-lg mt-12 sm:mt-16 md:mt-16 lg:mt-20 xl:mt-24 2xl:mt-36">

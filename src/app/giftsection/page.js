@@ -83,38 +83,38 @@ const GiftSection = () => {
       <section>
         <Header />
         <div>
-          <div className="mt-40  w-[75%] mx-auto ">
+          <div className="mt-24 sm:mt-32 lg:mt-40  mx-auto w-[90%] lg:w-[75%] ">
             <div className="space-y-3">
-              <p className="text-[40px] 2xl:text-[45px] flex justify-center">
+              <p className="text-[25px] sm:text-[30px] lg:text-[35px] 2xl:text-[40px] flex justify-center">
                 Valentine Day Gifts
               </p>
-              <p className="text-[14px] 2xl:text-[20px] opacity-50">
+              <p className="text-[10px] sm:text-[14px] 2xl:text-[20px] opacity-50">
                 Discover the glow of luxury with Passion exclusive gift offers
                 for your makeup.Whether you want to intensify your look, enhance
                 your smile or perfect your complexion, Passion offers you a
                 refined selection of high-end products to magnify every feature
                 of your beauty.{" "}
               </p>
-              <p className="text-[14px] 2xl:text-[20px] opacity-50">
+              <p className="text-[10px] sm:text-[14px] 2xl:text-[20px] opacity-50">
                 It is the perfect time to pamper yourself or a loved one with
                 our gift sets specially designed for eye, lip and complexion
                 makeup. Take advantage of this unique opportunity to enrich your
                 beauty kit with innovative formulas and captivating shades that
                 will highlight your face.{" "}
               </p>
-              <p className="text-[14px] 2xl:text-[20px] opacity-50">
+              <p className="text-[10px] sm:text-[14px] 2xl:text-[20px] opacity-50">
                 At Passion, we believe that every detail counts. That is why our
                 products are designed with care and dedication, to guarantee you
                 an unparalleled experience.Our offers are designed to meet your
                 desire for accessible luxury, without ever compromising quality.
               </p>
-              <p className="text-[14px] 2xl:text-[20px] opacity-50">
+              <p className="text-[10px] sm:text-[14px] 2xl:text-[20px] opacity-50">
                 Do not wait any longer to explore our range and find the ideal
                 gift that will make a splash. Visit our website or go to the
                 store to benefit from personalized advice and make your purchase
                 an exceptional moment.{" "}
               </p>
-              <p className="text-[14px] 2xl:text-[20px] opacity-50">
+              <p className="text-[10px] sm:text-[14px] 2xl:text-[20px] opacity-50">
                 With Passion, reveal the splendor of your beauty and let
                 yourself be seduced by a world of refinement. Treat yourself to
                 the luxury you deserve.
@@ -125,7 +125,7 @@ const GiftSection = () => {
           <div>
             <div
               data-aos="zoom-in"
-              className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-20 justify-around px-24 sm:px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-6 lg:mt-9 xl:mt-12 2xl:mt-32"
+              className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 2xl:gap-y-20 justify-around px-5 sm:px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-6 lg:mt-9 xl:mt-12 2xl:mt-32"
             >
               {produc.map((product) => (
                 <div key={product.id} className="">
@@ -139,7 +139,7 @@ const GiftSection = () => {
                         ? removeFromWishlist(product.id)
                         : addToWishlist(product);
                     }}
-                    className="absolute w-[40px] m-3 cursor-pointer"
+                    className="absolute w-[30px] 2xl:w-[40px] m-3 cursor-pointer"
                     src={
                       wishlist.some((item) => item.id === product.id)
                         ? filledHeartIcon
@@ -152,7 +152,7 @@ const GiftSection = () => {
                     as={`/procollect/${product.id}`}
                   >
                     <div
-                      className="w-full md:h-[90%] xl:h-[80%] 2xl:h-full"
+                      className="w-full md:h-[90%] xl:h-[70%] 2xl:h-full"
                       id="purple"
                     >
                       <Image
@@ -171,13 +171,13 @@ const GiftSection = () => {
           </div>
 
           <div>
-            <p className="text-[40px] 2xl:mt-32 flex justify-center">
+            <p className="text-[20px] sm:text-[30px] 2xl:text-[40px] mt-20 2xl:mt-32 flex justify-center">
               Discover more from our favorites
             </p>
             <div className="">
               <div
                 data-aos="zoom-in"
-                className="w-[40%]  mx-auto px-24 sm:px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-6 lg:mt-9 xl:mt-12 2xl:mt-16 "
+                className="w-[84%] sm:w-[95%] md:w-[70%] lg:w-[500px]  mx-auto px-0 sm:px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-6 lg:mt-9 xl:mt-12 2xl:mt-16 "
               >
                 {produc
                   .filter((prod) => prod.id == "satin")
@@ -224,27 +224,27 @@ const GiftSection = () => {
               </div>
             </div>
           </div>
-          <div className="bg-[#2E2A39] flex mt-10">
+          <div className="bg-[#2E2A39] flex mt-10 px-2">
             <div className="mx-auto py-20  ">
-              <p className="text-white text-[30px] mb-4">Contact us</p>
-              <div className="space-y-7">
+              <p className="text-white text-[20px] sm:text-[25px] 2xl:text-[30px] mb-4">Contact us</p>
+              <div className=" space-y-2 sm:space-y-5 2xl:space-y-7">
                 <div className="flex gap-x-2">
                   <input
                     type="text"
                     placeholder="Name"
-                    className="text-white border border-neutral-600 rounded-lg py-3 w-[400px] bg-[#2E2A39] placeholder:pl-3"
+                    className="text-white border border-neutral-600 rounded-lg py-2 w-1/2 2xl:w-[400px] bg-[#2E2A39] placeholder:pl-3"
                   />
                   <input
                     type="email"
                     placeholder="Email *"
-                    className="text-white border border-neutral-600 rounded-lg py-3 w-[400px] bg-[#2E2A39] placeholder:pl-3"
+                    className="text-white border border-neutral-600 rounded-lg py-2 w-1/2 2xl:w-[400px] bg-[#2E2A39] placeholder:pl-3"
                   />
                 </div>
                 <div>
                   <input
                     type="number"
                     placeholder="Phone number"
-                    className="text-white border border-neutral-600 rounded-lg py-3 w-[100%] bg-[#2E2A39] placeholder:pl-3"
+                    className="text-white border border-neutral-600 rounded-lg py-2 w-[100%] bg-[#2E2A39] placeholder:pl-3"
                   />
                 </div>
                 <div>
@@ -752,24 +752,13 @@ const GiftSection = () => {
           </div>
 
         {/* --------subscribe----------- */}
-        <div className='flex flex-col items-center m-20 relative'>
-    <p className='text-[35px] font-semibold'>Subscribe to our newsletter</p>
-    <div className="relative w-[30%]">
-        <input
-            className="m-4 w-full border rounded-2xl border-[#BABABA] bg-[#F5F5F5] px-2 py-2 text-black placeholder-gray"
-            type="email"
-            placeholder="Email"
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-            required
-        />
-        <Image
-            id="view1"
-            src={arrow}
-            alt="Right Arrow"
-            className="cursor-pointer absolute top-1/2 right-2 transform -translate-y-1/2 w-10 sm:w-5"
-        />
-    </div>
-</div>
+        <div className='mt-14 w-[82%] sm:w-[50%] mx-auto flex flex-col  items-center gap-y-4'>
+                <p className='text-[20px] 2xl:text-[40px]'>Subscribe to our newsletter</p>
+                <p className='opacity-70 text-[12px] 2xl:text-[18px]'>
+                Sign up today for free and be the first to know about our new updates, discounts and special offers.
+                </p>
+                <input className='text rounded-2xl  p-1 sm:p-3 border w-full sm:w-[70%] md:w-[100%]' type='email' placeholder='Email'></input>
+            </div>
 <hr className="mt-10"/>
 <Footer/>
 

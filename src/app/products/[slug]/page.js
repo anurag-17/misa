@@ -29,7 +29,7 @@ const ProductDetails = ({ params }) => {
       <div>
         <Header />
         <section className="mt-40 mx-32">
-          <h1 className="text-[50px] flex justify-center">Product Details</h1>
+          <h1 className="text-[16px] 2xl:text-[50px] flex justify-center">Product Details</h1>
           <div className="border border-gray-400  mx-auto p-8 rounded-lg shadow-2xl">
             {filterProduct.map((product) => (
               <div key={product.productId}>

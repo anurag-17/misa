@@ -99,7 +99,7 @@ const BestSeller = () => {
   return (
     <>
     <Header/>
-        <div className='2xl:mt-48 mt-32'>
+        <div className='mt-24 sm:mt-32 lg:mt-40'>
        
         <div className="collections text-[22px] sm:text-[24px] md:text-xl lg:text-3xl xl:text-3xl  2xl:text-5xl mt-5 sm:mt-6 md:mt-6 lg:mt-14 xl:mt-4 2xl:mt-32 flex justify-center fontf ">
             Our BestSeller Products
@@ -108,7 +108,7 @@ const BestSeller = () => {
           <div>
             <div
               data-aos="zoom-in"
-              className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 2xl:gap-y-20 justify-around px-24 sm:px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-6 lg:mt-9 xl:mt-12 2xl:mt-16"
+              className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 2xl:gap-y-20 justify-around px-5 sm:px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-6 lg:mt-9 xl:mt-12 2xl:mt-16"
             >
               {produc.map((product) => (
                 <div key={product.id} className="">
@@ -122,7 +122,7 @@ const BestSeller = () => {
                         ? removeFromWishlist(product.id)
                         : addToWishlist(product);
                     }}
-                    className="absolute w-[40px] m-3 cursor-pointer"
+                    className="absolute w-[30px] 2xl:w-[40px] m-3 cursor-pointer"
                     src={
                       wishlist.some((item) => item.id === product.id)
                         ? filledHeartIcon
@@ -135,7 +135,7 @@ const BestSeller = () => {
                     as={`/procollect/${product.id}`}
                   >
                     <div
-                      className="w-full md:h-[90%] xl:h-[80%] 2xl:h-full"
+                      className="w-full md:h-[90%] xl:h-[70%] 2xl:h-full"
                       id="purple"
                     >
                       <Image
@@ -156,7 +156,7 @@ const BestSeller = () => {
           <div
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
-            className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 justify-around px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-5 lg:mt-8 xl:mt-10 2xl:mt-20"
+            className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 justify-around px-5 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-5 lg:mt-8 xl:mt-10 2xl:mt-20"
           >
             {products.map((product) => (
               <div key={product.id} className="">
@@ -170,7 +170,7 @@ const BestSeller = () => {
                         ? removeFromWishlist(product.id)
                         : addToWishlist(product);
                     }}
-                    className="absolute w-[40px] m-3 cursor-pointer"
+                    className="absolute w-[30px] 2xl:w-[40px] m-3 cursor-pointer"
                     src={
                       wishlist.some((item) => item.id === product.id)
                         ? filledHeartIcon
@@ -180,7 +180,7 @@ const BestSeller = () => {
                   />
                 <Link href="/products/[slug]" as={`/products/${product.id}`}>
                   <div
-                    className="vv w-full xl:h-[80%] 2xl:h-full"
+                    className="vv w-full xl:h-[75%] 2xl:h-[97%]"
                     id={product.id}
                   >
                     <Image

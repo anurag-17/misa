@@ -221,7 +221,7 @@ const Page = () => {
           <div>
             <div
               data-aos="zoom-in"
-              className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 2xl:gap-y-20 justify-around px-24 sm:px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-6 lg:mt-9 xl:mt-12 2xl:mt-16"
+              className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 2xl:gap-y-20 justify-around px-5 sm:px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-6 lg:mt-9 xl:mt-12 2xl:mt-16"
             >
               {produc.map((product) => (
                 <div key={product.id} className="">
@@ -235,7 +235,7 @@ const Page = () => {
                         ? removeFromWishlist(product.id)
                         : addToWishlist(product);
                     }}
-                    className="absolute w-[40px] m-3 cursor-pointer"
+                    className="absolute w-[25px] sm:w-[40px] m-3 cursor-pointer"
                     src={
                       wishlist.some((item) => item.id === product.id)
                         ? filledHeartIcon
@@ -276,9 +276,9 @@ const Page = () => {
               data-aos="fade-right"
               data-aos-offset="300"
               data-aos-easing="ease-in-sine"
-              className="flex flex-col  items-center sm:pr-10 md:pr-14 lg:pr-16 xl:pr-20 2xl:pr-20 py- lg:py-36 xl:py-[187px] 2xl:py-[270px] text-white perleye"
+              className="flex flex-col  items-center sm:pr-10 md:pr-14 lg:pr-16 xl:pr-20 2xl:pr-20 py-16 sm:py-24 md:py-36 lg:py-36 xl:py-[187px] 2xl:py-[270px] text-white perleye"
             >
-              <div className="perleye fontf sm:text-[22px] md:text-[28px] pt-20 sm:pt-24 md:pt-28 lg:pt-0  lg:text-[35px] xl:text-[40px] 2xl:text-[54px]">
+              <div className="perleye fontf sm:text-[22px] md:text-[28px] pt-0 sm:pt-0 md:pt-0 lg:pt-0  lg:text-[35px] xl:text-[40px] 2xl:text-[54px]">
                 PERLAY EYES
               </div>
               <div className="fontf collection sm:text-[22px] md:text-[28px] lg:text-[35px] xl:text-[40px] 2xl:text-[54px] md:leading-7 lg:leading-9 xl:leading-9 2xl:leading-normal ">
@@ -303,7 +303,7 @@ const Page = () => {
           <div
             data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
-            className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 justify-around px-28 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-5 lg:mt-8 xl:mt-10 2xl:mt-20"
+            className="grid md:grid-cols-3 grid-cols-1 gap-y-7 md:gap-y-0 justify-around px-5 md:px-12 lg:px-16 xl:px-24 2xl:px-28 gap-1 mt-4 sm:mt-4 md:mt-5 lg:mt-8 xl:mt-10 2xl:mt-20"
           >
             {products.map((product) => (
               <div key={product.id} className="">
@@ -317,7 +317,7 @@ const Page = () => {
                         ? removeFromWishlist(product.id)
                         : addToWishlist(product);
                     }}
-                    className="absolute w-[40px] m-3 cursor-pointer"
+                    className="absolute w-[25px] sm:w-[40px] m-3 cursor-pointer"
                     src={
                       wishlist.some((item) => item.id === product.id)
                         ? filledHeartIcon

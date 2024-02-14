@@ -74,13 +74,13 @@ export const CartProvider = ({ children }) => {
     setCart([]);
     saveCartToLocalStorage([]);
   };
-  // const clearWishlist=()=>{
-  //   setWishlist([]);
-  //   saveWishlistToLocalStorage([]);
-  // };
+  const clearWishlist=()=>{
+    setWishlist([]);
+    saveWishlistToLocalStorage([]);
+  };
  
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart, addToWishlist, removeFromWishlist,calculateTotalPrice,clearCart,wishlist }}>
+    <CartContext.Provider value={{ cart,clearWishlist, addToCart, removeFromCart, addToWishlist, removeFromWishlist,calculateTotalPrice,clearCart,wishlist }}>
       {children}
     </CartContext.Provider>
   );
